@@ -14,7 +14,7 @@ return [
         'db' => [
             'driver' => getenv('DB_CONNECTION',true) ? getenv('DB_CONNECTION') : 'mysql',
             'host' => getenv('DB_HOST',true) ? getenv('DB_HOST') : 'localhost',
-            'database' => getenv('DB_DATABASE',true) ? getenv('DB_DATABASE') : __DIR__ . '/../../dummy.db',
+            'database' => getenv('DB_DATABASE',true) ? getenv('DB_DATABASE') : __DIR__ . '/../db/dummy.db',
             'username' => getenv('DB_USERNAME',true) ? getenv('DB_USERNAME') : '',
             'password' => getenv('DB_PASSWORD',true) ? getenv('DB_PASSWORD') : '',
             'charset' => getenv('DB_CHARSET',true) ? getenv('DB_CHARSET') : 'utf8',

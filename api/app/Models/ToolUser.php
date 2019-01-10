@@ -1,8 +1,6 @@
 <?php namespace App\Models;
 
-use Illuminate\Database\Eloquent\Model;
-
-class ToolUser extends Model
+class ToolUser extends Base
 {
     protected $table = 'tool_users';
     protected $hidden = [

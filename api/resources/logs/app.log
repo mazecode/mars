@@ -1,101 +1,120 @@
-[2019-01-05 20:03:30] true.INFO: Slim-Skeleton '/' route [] {"uid":"2025cdb"}
-[2019-01-05 20:03:30] true.INFO: Slim-Skeleton '/' route [] {"uid":"59f52c5"}
-[2019-01-05 20:03:31] true.INFO: Slim-Skeleton '/' route [] {"uid":"5225024"}
-[2019-01-05 20:03:53] true.INFO: Slim-Skeleton '/' route [] {"uid":"a218c55"}
-[2019-01-05 20:03:53] true.INFO: Slim-Skeleton '/' route [] {"uid":"65628fa"}
-[2019-01-05 20:03:53] true.INFO: Slim-Skeleton '/' route [] {"uid":"70e0831"}
-[2019-01-05 20:03:53] true.INFO: Slim-Skeleton '/' route [] {"uid":"40e1cf4"}
-[2019-01-05 20:03:53] true.INFO: Slim-Skeleton '/' route [] {"uid":"94260c9"}
-[2019-01-05 20:03:53] true.INFO: Slim-Skeleton '/' route [] {"uid":"7c53ea3"}
-[2019-01-05 20:03:54] true.INFO: Slim-Skeleton '/' route [] {"uid":"35bc3c7"}
-[2019-01-05 20:03:54] true.INFO: Slim-Skeleton '/' route [] {"uid":"2088de7"}
-[2019-01-05 20:03:54] true.INFO: Slim-Skeleton '/' route [] {"uid":"9a7795c"}
-[2019-01-05 20:03:54] true.INFO: Slim-Skeleton '/' route [] {"uid":"011daca"}
-[2019-01-05 20:03:54] true.INFO: Slim-Skeleton '/' route [] {"uid":"a540446"}
-[2019-01-05 20:03:54] true.INFO: Slim-Skeleton '/' route [] {"uid":"7d763b1"}
-[2019-01-05 20:03:54] true.INFO: Slim-Skeleton '/' route [] {"uid":"0876b82"}
-[2019-01-05 20:03:54] true.INFO: Slim-Skeleton '/' route [] {"uid":"14180de"}
-[2019-01-05 20:03:55] true.INFO: Slim-Skeleton '/' route [] {"uid":"29a2d27"}
-[2019-01-05 20:03:55] true.INFO: Slim-Skeleton '/' route [] {"uid":"c625e48"}
-[2019-01-05 20:03:55] true.INFO: Slim-Skeleton '/' route [] {"uid":"6b1bb3c"}
-[2019-01-05 20:14:54] true.INFO: Users index [] {"uid":"771df51"}
-[2019-01-05 20:15:26] true.INFO: Users index [] {"uid":"051cca1"}
-[2019-01-05 20:15:58] true.INFO: Users index [] {"uid":"8168827"}
-[2019-01-05 20:16:21] true.INFO: Users index [] {"uid":"86f7930"}
-[2019-01-05 20:16:22] true.INFO: Users index [] {"uid":"e8c27ec"}
-[2019-01-05 20:17:16] true.INFO: Users index [] {"uid":"81f2778"}
-[2019-01-05 20:17:16] true.INFO: Users index [] {"uid":"2bdb1ee"}
-[2019-01-05 20:17:16] true.INFO: Users index [] {"uid":"6ea6917"}
-[2019-01-05 20:18:29] true.INFO: Users index [] {"uid":"9facab2"}
-[2019-01-05 20:19:58] true.INFO: Users index [] {"uid":"9e122ca"}
-[2019-01-05 20:19:59] true.INFO: Users index [] {"uid":"50a88fd"}
-[2019-01-05 20:19:59] true.INFO: Users index [] {"uid":"7aa9ade"}
-[2019-01-05 20:19:59] true.INFO: Users index [] {"uid":"edb66db"}
-[2019-01-05 20:19:59] true.INFO: Users index [] {"uid":"c9e41e5"}
-[2019-01-05 20:20:09] true.INFO: Users index [] {"uid":"a958380"}
-[2019-01-05 20:20:10] true.INFO: Users index [] {"uid":"af5cb42"}
-[2019-01-05 20:20:20] true.INFO: Users index [] {"uid":"035fcb0"}
-[2019-01-05 20:20:20] true.INFO: Users index [] {"uid":"c806c20"}
-[2019-01-05 20:20:20] true.INFO: Users index [] {"uid":"575a838"}
-[2019-01-05 20:20:21] true.INFO: Users index [] {"uid":"b33efe8"}
-[2019-01-05 20:20:21] true.INFO: Users index [] {"uid":"21e9b22"}
-[2019-01-05 20:20:21] true.INFO: Users index [] {"uid":"6cff9ba"}
-[2019-01-05 20:20:21] true.INFO: Users index [] {"uid":"76285ff"}
-[2019-01-05 20:20:21] true.INFO: Users index [] {"uid":"630066e"}
-[2019-01-05 20:20:24] true.INFO: Users index [] {"uid":"27a56cb"}
-[2019-01-05 20:20:40] true.INFO: Users index [] {"uid":"09e3edd"}
-[2019-01-07 01:02:19] true.INFO: Users index [] {"uid":"a2379bb"}
-[2019-01-07 01:02:32] true.INFO: Users index [] {"uid":"5f62230"}
-[2019-01-07 01:03:05] true.INFO: Users index [] {"uid":"1cecdeb"}
-[2019-01-07 01:03:05] true.INFO: Users index [] {"uid":"418e6d8"}
-[2019-01-07 01:03:23] true.INFO: Users index [] {"uid":"c306d62"}
-[2019-01-07 01:03:24] true.INFO: Users index [] {"uid":"6c84982"}
-[2019-01-07 01:03:39] true.INFO: Users index [] {"uid":"f193fb4"}
-[2019-01-07 01:03:39] true.INFO: Users index [] {"uid":"50b7131"}
-[2019-01-07 01:03:42] true.INFO: Users index [] {"uid":"6cb7d00"}
-[2019-01-07 01:03:42] true.INFO: Users index [] {"uid":"dfa0104"}
-[2019-01-07 01:04:00] true.INFO: Users index [] {"uid":"de31048"}
-[2019-01-07 01:04:00] true.INFO: Users index [] {"uid":"89448ac"}
-[2019-01-07 01:04:02] true.INFO: Users index [] {"uid":"deae9e7"}
-[2019-01-07 01:05:46] true.INFO: Users index [] {"uid":"5b5afbf"}
-[2019-01-07 01:05:46] true.INFO: Users index [] {"uid":"8c8699a"}
-[2019-01-07 01:05:58] true.INFO: Users index [] {"uid":"d69cf9e"}
-[2019-01-07 01:05:59] true.INFO: Users index [] {"uid":"85d91f9"}
-[2019-01-07 01:08:06] true.INFO: Users index [] {"uid":"1b4b797"}
-[2019-01-07 01:08:06] true.INFO: Users index [] {"uid":"52ab6d4"}
-[2019-01-07 01:08:12] true.INFO: Users index [] {"uid":"07edeff"}
-[2019-01-07 01:08:13] true.INFO: Users index [] {"uid":"f71abea"}
-[2019-01-07 01:08:16] true.INFO: Users index [] {"uid":"2ab98a6"}
-[2019-01-07 01:08:16] true.INFO: Users index [] {"uid":"da8a43a"}
-[2019-01-07 01:08:31] true.INFO: Users index [] {"uid":"e0ad386"}
-[2019-01-07 01:08:31] true.INFO: Users index [] {"uid":"2eff943"}
-[2019-01-07 01:08:47] true.INFO: Users index [] {"uid":"ec37ec8"}
-[2019-01-07 01:08:47] true.INFO: Users index [] {"uid":"8819f25"}
-[2019-01-07 01:08:53] true.INFO: Users index [] {"uid":"1bcbf02"}
-[2019-01-07 01:08:53] true.INFO: Users index [] {"uid":"a41064a"}
-[2019-01-07 01:09:16] true.INFO: Users index [] {"uid":"6733178"}
-[2019-01-07 01:09:16] true.INFO: Users index [] {"uid":"46a0eee"}
-[2019-01-07 01:09:18] true.INFO: Users index [] {"uid":"0c1c7a9"}
-[2019-01-07 01:09:19] true.INFO: Users index [] {"uid":"605d0b5"}
-[2019-01-07 01:09:25] true.INFO: Users index [] {"uid":"31dccd6"}
-[2019-01-07 01:09:25] true.INFO: Users index [] {"uid":"da32449"}
-[2019-01-07 01:09:29] true.INFO: Users index [] {"uid":"1961d44"}
-[2019-01-07 01:09:30] true.INFO: Users index [] {"uid":"23dac86"}
-[2019-01-07 01:09:31] true.INFO: Users index [] {"uid":"e637e91"}
-[2019-01-07 01:09:32] true.INFO: Users index [] {"uid":"b85e152"}
-[2019-01-07 01:09:34] true.INFO: Users index [] {"uid":"a1169f2"}
-[2019-01-07 01:09:35] true.INFO: Users index [] {"uid":"0842a13"}
-[2019-01-07 01:09:38] true.INFO: Users index [] {"uid":"38c8fde"}
-[2019-01-07 01:09:38] true.INFO: Users index [] {"uid":"7d1d276"}
-[2019-01-07 01:10:08] true.INFO: Users index [] {"uid":"c2ca699"}
-[2019-01-07 01:10:09] true.INFO: Users index [] {"uid":"057f099"}
-[2019-01-07 01:10:33] true.INFO: Users index [] {"uid":"e727179"}
-[2019-01-07 01:10:43] true.INFO: Users index [] {"uid":"fef29e6"}
-[2019-01-07 01:10:44] true.INFO: Users index [] {"uid":"d467faa"}
-[2019-01-07 01:10:50] true.INFO: Users index [] {"uid":"d8ca37e"}
-[2019-01-07 01:13:15] true.INFO: Users index [] {"uid":"e7f87eb"}
-[2019-01-07 01:13:17] true.INFO: Users index [] {"uid":"f4d4b58"}
-[2019-01-07 01:13:26] true.INFO: Users index [] {"uid":"fc57fd5"}
-[2019-01-07 01:14:49] true.INFO: Users index [] {"uid":"c9cd0d5"}
-[2019-01-07 01:14:57] true.INFO: Users index [] {"uid":"2d3ad62"}
-[2019-01-07 01:33:34] true.INFO: Users index [] {"uid":"6ae9709"}
+[2019-01-08 14:58:44] true.DEBUG: CORS analysis for request started. [] {"uid":"969c2d8"}
+[2019-01-08 14:58:44] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"969c2d8"}
+[2019-01-08 14:58:44] true.DEBUG: CORS analysis for request completed. [] {"uid":"969c2d8"}
+[2019-01-08 14:58:44] true.INFO: Users index [] {"uid":"969c2d8"}
+[2019-01-08 14:58:50] true.DEBUG: CORS analysis for request started. [] {"uid":"72f4a61"}
+[2019-01-08 14:58:50] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"72f4a61"}
+[2019-01-08 14:58:50] true.DEBUG: CORS analysis for request completed. [] {"uid":"72f4a61"}
+[2019-01-08 14:58:50] true.INFO: Users index [] {"uid":"72f4a61"}
+[2019-01-08 14:59:48] true.DEBUG: CORS analysis for request started. [] {"uid":"0ee5634"}
+[2019-01-08 14:59:48] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"0ee5634"}
+[2019-01-08 14:59:48] true.DEBUG: CORS analysis for request completed. [] {"uid":"0ee5634"}
+[2019-01-08 14:59:48] true.INFO: Users index [] {"uid":"0ee5634"}
+[2019-01-08 15:00:03] true.DEBUG: CORS analysis for request started. [] {"uid":"94a5ed8"}
+[2019-01-08 15:00:03] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"94a5ed8"}
+[2019-01-08 15:00:03] true.DEBUG: CORS analysis for request completed. [] {"uid":"94a5ed8"}
+[2019-01-08 15:00:03] true.INFO: Users index [] {"uid":"94a5ed8"}
+[2019-01-08 15:00:15] true.DEBUG: CORS analysis for request started. [] {"uid":"02cba9a"}
+[2019-01-08 15:00:15] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"02cba9a"}
+[2019-01-08 15:00:15] true.DEBUG: CORS analysis for request completed. [] {"uid":"02cba9a"}
+[2019-01-08 15:00:15] true.INFO: Users index [] {"uid":"02cba9a"}
+[2019-01-08 15:00:54] true.DEBUG: CORS analysis for request started. [] {"uid":"20668ad"}
+[2019-01-08 15:00:54] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"20668ad"}
+[2019-01-08 15:00:54] true.DEBUG: CORS analysis for request completed. [] {"uid":"20668ad"}
+[2019-01-08 15:01:15] true.DEBUG: CORS analysis for request started. [] {"uid":"98d529b"}
+[2019-01-08 15:01:15] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"98d529b"}
+[2019-01-08 15:01:15] true.DEBUG: CORS analysis for request completed. [] {"uid":"98d529b"}
+[2019-01-08 15:01:28] true.DEBUG: CORS analysis for request started. [] {"uid":"2d16b7c"}
+[2019-01-08 15:01:28] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"2d16b7c"}
+[2019-01-08 15:01:28] true.DEBUG: CORS analysis for request completed. [] {"uid":"2d16b7c"}
+[2019-01-08 15:01:28] true.INFO: Users index [] {"uid":"2d16b7c"}
+[2019-01-08 15:02:36] true.DEBUG: CORS analysis for request started. [] {"uid":"0d8ca30"}
+[2019-01-08 15:02:36] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"0d8ca30"}
+[2019-01-08 15:02:36] true.DEBUG: CORS analysis for request completed. [] {"uid":"0d8ca30"}
+[2019-01-08 15:03:38] true.DEBUG: CORS analysis for request started. [] {"uid":"0244200"}
+[2019-01-08 15:03:38] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"0244200"}
+[2019-01-08 15:03:38] true.DEBUG: CORS analysis for request completed. [] {"uid":"0244200"}
+[2019-01-08 15:03:38] true.INFO: Users index [] {"uid":"0244200"}
+[2019-01-08 15:05:44] true.DEBUG: CORS analysis for request started. [] {"uid":"bebe529"}
+[2019-01-08 15:05:44] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"bebe529"}
+[2019-01-08 15:05:44] true.DEBUG: CORS analysis for request completed. [] {"uid":"bebe529"}
+[2019-01-08 15:05:44] true.INFO: Users index [] {"uid":"bebe529"}
+[2019-01-08 15:05:49] true.DEBUG: CORS analysis for request started. [] {"uid":"f4687c2"}
+[2019-01-08 15:05:49] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"f4687c2"}
+[2019-01-08 15:05:49] true.DEBUG: CORS analysis for request completed. [] {"uid":"f4687c2"}
+[2019-01-08 15:05:49] true.INFO: Users index [] {"uid":"f4687c2"}
+[2019-01-08 15:06:13] true.DEBUG: CORS analysis for request started. [] {"uid":"2cc5cf7"}
+[2019-01-08 15:06:13] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"2cc5cf7"}
+[2019-01-08 15:06:13] true.DEBUG: CORS analysis for request completed. [] {"uid":"2cc5cf7"}
+[2019-01-08 15:06:13] true.INFO: Users index [] {"uid":"2cc5cf7"}
+[2019-01-08 15:06:26] true.DEBUG: CORS analysis for request started. [] {"uid":"1aa381f"}
+[2019-01-08 15:06:26] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"1aa381f"}
+[2019-01-08 15:06:26] true.DEBUG: CORS analysis for request completed. [] {"uid":"1aa381f"}
+[2019-01-08 15:06:26] true.INFO: Users index [] {"uid":"1aa381f"}
+[2019-01-08 15:06:38] true.DEBUG: CORS analysis for request started. [] {"uid":"c2ee15b"}
+[2019-01-08 15:06:38] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"c2ee15b"}
+[2019-01-08 15:06:38] true.DEBUG: CORS analysis for request completed. [] {"uid":"c2ee15b"}
+[2019-01-08 15:06:39] true.DEBUG: CORS analysis for request started. [] {"uid":"3aa2a7d"}
+[2019-01-08 15:06:39] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"3aa2a7d"}
+[2019-01-08 15:06:39] true.DEBUG: CORS analysis for request completed. [] {"uid":"3aa2a7d"}
+[2019-01-08 15:06:39] true.INFO: Users index [] {"uid":"3aa2a7d"}
+[2019-01-08 15:06:41] true.DEBUG: CORS analysis for request started. [] {"uid":"674245b"}
+[2019-01-08 15:06:41] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"674245b"}
+[2019-01-08 15:06:41] true.DEBUG: CORS analysis for request completed. [] {"uid":"674245b"}
+[2019-01-08 15:06:41] true.INFO: Users index [] {"uid":"674245b"}
+[2019-01-08 15:06:42] true.DEBUG: CORS analysis for request started. [] {"uid":"c0faa63"}
+[2019-01-08 15:06:42] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"c0faa63"}
+[2019-01-08 15:06:42] true.DEBUG: CORS analysis for request completed. [] {"uid":"c0faa63"}
+[2019-01-08 15:06:42] true.INFO: Users index [] {"uid":"c0faa63"}
+[2019-01-08 15:06:53] true.DEBUG: CORS analysis for request started. [] {"uid":"d183535"}
+[2019-01-08 15:06:53] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"d183535"}
+[2019-01-08 15:06:53] true.DEBUG: CORS analysis for request completed. [] {"uid":"d183535"}
+[2019-01-08 15:06:54] true.DEBUG: CORS analysis for request started. [] {"uid":"7dc13a7"}
+[2019-01-08 15:06:54] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"7dc13a7"}
+[2019-01-08 15:06:54] true.DEBUG: CORS analysis for request completed. [] {"uid":"7dc13a7"}
+[2019-01-08 15:06:54] true.INFO: Users index [] {"uid":"7dc13a7"}
+[2019-01-08 15:07:04] true.DEBUG: CORS analysis for request started. [] {"uid":"ba8004a"}
+[2019-01-08 15:07:04] true.INFO: Request origin is not allowed. Check config settings for Allowed Origins. {"origin":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: http://localhost:4200)"} {"uid":"ba8004a"}
+[2019-01-08 15:07:04] true.DEBUG: CORS analysis for request completed. [] {"uid":"ba8004a"}
+[2019-01-08 15:07:13] true.DEBUG: CORS analysis for request started. [] {"uid":"d7f1c13"}
+[2019-01-08 15:07:13] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"d7f1c13"}
+[2019-01-08 15:07:13] true.DEBUG: CORS analysis for request completed. [] {"uid":"d7f1c13"}
+[2019-01-08 15:07:13] true.DEBUG: CORS analysis for request started. [] {"uid":"a38f5cc"}
+[2019-01-08 15:07:13] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"a38f5cc"}
+[2019-01-08 15:07:13] true.DEBUG: CORS analysis for request completed. [] {"uid":"a38f5cc"}
+[2019-01-08 15:07:13] true.INFO: Users index [] {"uid":"a38f5cc"}
+[2019-01-08 15:24:29] true.DEBUG: CORS analysis for request started. [] {"uid":"3452b17"}
+[2019-01-08 15:24:29] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"3452b17"}
+[2019-01-08 15:24:29] true.DEBUG: CORS analysis for request completed. [] {"uid":"3452b17"}
+[2019-01-08 15:24:29] true.INFO: Users index [] {"uid":"3452b17"}
+[2019-01-08 15:27:51] true.DEBUG: CORS analysis for request started. [] {"uid":"76d899a"}
+[2019-01-08 15:27:51] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"76d899a"}
+[2019-01-08 15:27:51] true.DEBUG: CORS analysis for request completed. [] {"uid":"76d899a"}
+[2019-01-08 15:27:51] true.INFO: Slim-Skeleton '/' route [] {"uid":"76d899a"}
+[2019-01-08 15:27:53] true.DEBUG: CORS analysis for request started. [] {"uid":"def44cc"}
+[2019-01-08 15:27:53] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"def44cc"}
+[2019-01-08 15:27:53] true.DEBUG: CORS analysis for request completed. [] {"uid":"def44cc"}
+[2019-01-08 15:27:53] true.INFO: Users index [] {"uid":"def44cc"}
+[2019-01-08 15:32:22] true.DEBUG: CORS analysis for request started. [] {"uid":"cfb81d8"}
+[2019-01-08 15:32:22] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"cfb81d8"}
+[2019-01-08 15:32:22] true.DEBUG: CORS analysis for request completed. [] {"uid":"cfb81d8"}
+[2019-01-08 15:32:22] true.DEBUG: CORS analysis for request started. [] {"uid":"94ce15d"}
+[2019-01-08 15:32:22] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"94ce15d"}
+[2019-01-08 15:32:22] true.DEBUG: CORS analysis for request completed. [] {"uid":"94ce15d"}
+[2019-01-08 15:32:22] true.INFO: Users index [] {"uid":"94ce15d"}
+[2019-01-09 16:04:10] true.DEBUG: CORS analysis for request started. [] {"uid":"e68ae6f"}
+[2019-01-09 16:04:10] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"e68ae6f"}
+[2019-01-09 16:04:10] true.DEBUG: CORS analysis for request completed. [] {"uid":"e68ae6f"}
+[2019-01-09 16:04:10] true.INFO: Users index [] {"uid":"e68ae6f"}
+[2019-01-09 16:04:11] true.DEBUG: CORS analysis for request started. [] {"uid":"47001cb"}
+[2019-01-09 16:04:11] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"47001cb"}
+[2019-01-09 16:04:11] true.DEBUG: CORS analysis for request completed. [] {"uid":"47001cb"}
+[2019-01-09 16:04:11] true.INFO: Slim-Skeleton '/' route [] {"uid":"47001cb"}
+[2019-01-09 16:06:01] true.DEBUG: CORS analysis for request started. [] {"uid":"d5805d2"}
+[2019-01-09 16:06:01] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"d5805d2"}
+[2019-01-09 16:06:01] true.DEBUG: CORS analysis for request completed. [] {"uid":"d5805d2"}
+[2019-01-09 16:06:01] true.INFO: Users index [] {"uid":"d5805d2"}
+[2019-01-09 16:06:01] true.DEBUG: CORS analysis for request started. [] {"uid":"fa7ee28"}
+[2019-01-09 16:06:01] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"fa7ee28"}
+[2019-01-09 16:06:01] true.DEBUG: CORS analysis for request completed. [] {"uid":"fa7ee28"}
+[2019-01-09 16:06:01] true.INFO: Slim-Skeleton '/' route [] {"uid":"fa7ee28"}
