@@ -118,3 +118,64 @@
 [2019-01-09 16:06:01] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"fa7ee28"}
 [2019-01-09 16:06:01] true.DEBUG: CORS analysis for request completed. [] {"uid":"fa7ee28"}
 [2019-01-09 16:06:01] true.INFO: Slim-Skeleton '/' route [] {"uid":"fa7ee28"}
+[2019-01-10 14:33:23] true.DEBUG: CORS analysis for request started. [] {"uid":"9de968c"}
+[2019-01-10 14:33:23] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"9de968c"}
+[2019-01-10 14:33:23] true.DEBUG: CORS analysis for request completed. [] {"uid":"9de968c"}
+[2019-01-10 14:33:23] true.INFO: Users index [] {"uid":"9de968c"}
+[2019-01-10 14:33:24] true.DEBUG: CORS analysis for request started. [] {"uid":"1011c90"}
+[2019-01-10 14:33:24] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"1011c90"}
+[2019-01-10 14:33:24] true.DEBUG: CORS analysis for request completed. [] {"uid":"1011c90"}
+[2019-01-10 14:33:24] true.INFO: Slim-Skeleton '/' route [] {"uid":"1011c90"}
+[2019-01-10 14:33:39] true.DEBUG: CORS analysis for request started. [] {"uid":"8e80821"}
+[2019-01-10 14:33:39] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"8e80821"}
+[2019-01-10 14:33:39] true.DEBUG: CORS analysis for request completed. [] {"uid":"8e80821"}
+[2019-01-10 14:33:39] true.INFO: Users index [] {"uid":"8e80821"}
+[2019-01-10 14:33:39] true.DEBUG: CORS analysis for request started. [] {"uid":"b1fe274"}
+[2019-01-10 14:33:39] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"b1fe274"}
+[2019-01-10 14:33:39] true.DEBUG: CORS analysis for request completed. [] {"uid":"b1fe274"}
+[2019-01-10 14:33:39] true.INFO: Slim-Skeleton '/' route [] {"uid":"b1fe274"}
+[2019-01-10 15:01:12] true.DEBUG: CORS analysis for request started. [] {"uid":"fb91828"}
+[2019-01-10 15:01:12] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"fb91828"}
+[2019-01-10 15:01:12] true.DEBUG: CORS analysis for request completed. [] {"uid":"fb91828"}
+[2019-01-10 15:01:12] true.INFO: Users index [] {"uid":"fb91828"}
+[2019-01-10 15:01:12] true.DEBUG: CORS analysis for request started. [] {"uid":"b4bfb8b"}
+[2019-01-10 15:01:12] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"b4bfb8b"}
+[2019-01-10 15:01:12] true.DEBUG: CORS analysis for request completed. [] {"uid":"b4bfb8b"}
+[2019-01-10 15:01:12] true.INFO: Slim-Skeleton '/' route [] {"uid":"b4bfb8b"}
+[2019-01-10 15:27:52] true.DEBUG: CORS analysis for request started. [] {"uid":"922de6a"}
+[2019-01-10 15:27:52] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"922de6a"}
+[2019-01-10 15:27:52] true.DEBUG: CORS analysis for request completed. [] {"uid":"922de6a"}
+[2019-01-10 15:27:52] true.INFO: Users index [] {"uid":"922de6a"}
+[2019-01-10 15:28:54] true.DEBUG: CORS analysis for request started. [] {"uid":"84995af"}
+[2019-01-10 15:28:54] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"84995af"}
+[2019-01-10 15:28:54] true.INFO: Request header is not allowed. Check config settings for Allowed Headers. {"header":"x-custom-header"} {"uid":"84995af"}
+[2019-01-10 15:28:54] true.DEBUG: CORS analysis for request completed. [] {"uid":"84995af"}
+[2019-01-10 15:29:03] true.DEBUG: CORS analysis for request started. [] {"uid":"9914539"}
+[2019-01-10 15:29:03] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"9914539"}
+[2019-01-10 15:29:03] true.INFO: Request header is not allowed. Check config settings for Allowed Headers. {"header":"x-custom-header"} {"uid":"9914539"}
+[2019-01-10 15:29:03] true.DEBUG: CORS analysis for request completed. [] {"uid":"9914539"}
+[2019-01-10 15:29:12] true.DEBUG: CORS analysis for request started. [] {"uid":"ce33394"}
+[2019-01-10 15:29:12] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"ce33394"}
+[2019-01-10 15:29:12] true.INFO: Request header is not allowed. Check config settings for Allowed Headers. {"header":"x-custom-header"} {"uid":"ce33394"}
+[2019-01-10 15:29:12] true.DEBUG: CORS analysis for request completed. [] {"uid":"ce33394"}
+[2019-01-10 15:30:08] true.DEBUG: CORS analysis for request started. [] {"uid":"2f9bb63"}
+[2019-01-10 15:30:08] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"2f9bb63"}
+[2019-01-10 15:30:08] true.INFO: Request header is not allowed. Check config settings for Allowed Headers. {"header":"x-custom-header"} {"uid":"2f9bb63"}
+[2019-01-10 15:30:08] true.DEBUG: CORS analysis for request completed. [] {"uid":"2f9bb63"}
+[2019-01-10 15:30:38] true.DEBUG: CORS analysis for request started. [] {"uid":"f61349e"}
+[2019-01-10 15:30:38] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"f61349e"}
+[2019-01-10 15:30:38] true.INFO: Request header is not allowed. Check config settings for Allowed Headers. {"header":"x-custom-header"} {"uid":"f61349e"}
+[2019-01-10 15:30:38] true.DEBUG: CORS analysis for request completed. [] {"uid":"f61349e"}
+[2019-01-10 15:30:48] true.DEBUG: CORS analysis for request started. [] {"uid":"8a78d76"}
+[2019-01-10 15:30:48] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"8a78d76"}
+[2019-01-10 15:30:48] true.DEBUG: CORS analysis for request completed. [] {"uid":"8a78d76"}
+[2019-01-10 15:30:48] true.INFO: Users index [] {"uid":"8a78d76"}
+[2019-01-10 15:30:48] true.DEBUG: CORS analysis for request started. [] {"uid":"8633265"}
+[2019-01-10 15:30:48] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"8633265"}
+[2019-01-10 15:30:48] true.DEBUG: CORS analysis for request completed. [] {"uid":"8633265"}
+[2019-01-10 15:30:48] true.INFO: Slim-Skeleton '/' route [] {"uid":"8633265"}
+[2019-01-10 15:36:58] true.INFO: Users index [] {"uid":"96ce944"}
+[2019-01-10 15:37:00] true.INFO: Users index [] {"uid":"b56947f"}
+[2019-01-10 15:37:29] true.INFO: Users index [] {"uid":"fec4f99"}
+[2019-01-10 16:03:56] true.INFO: Users index [] {"uid":"6030481"}
+[2019-01-10 16:03:56] true.INFO: Slim-Skeleton '/' route [] {"uid":"c9c51ff"}

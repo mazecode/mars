@@ -1,6 +1,9 @@
 import { Injectable } from '@angular/core';
+
 import { NGXLogger } from 'ngx-logger';
-import { Observable } from 'rxjs';
+import { ApiService } from '../api/api.service';
+import { HttpClient } from '@angular/common/http';
+import { JwtService } from '../jwt/jwt.service';
 
 @Injectable({
   providedIn: 'root'
@@ -8,15 +11,17 @@ import { Observable } from 'rxjs';
 export class UserService {
   users: any[] = [];
 
-  constructor(private logger: NGXLogger) {
-    this.logger.debug('User Service init...');
+  constructor(private service: ApiService) {
+    console.log('User Service init...');
+
+    console.log(service);
   }
 
-  // all() {
-  // return this.service.http.get('`${this.service.ENDPOINT}/users`', this.service.HTTPOPTIONS);
-  // }
+  all() {
+    return this.service.Get(`/users`);
+  }
 
-  // get(id: number): Observable<IResponse> {
-  // return this.service.http.get<IResponse>('`${this.service.ENDPOINT}/users/${id}`', this.service.HTTPOPTIONS);
-  // }
+  get(id: number) {
+    return this.service.Get(`/users/${id}`);
+  }
 }

@@ -1,66 +1,54 @@
 import { Injectable } from '@angular/core';
-import { environment } from '../../../environments/environment';
+import { HttpClient } from '@angular/common/http';
 import { Observable, throwError } from 'rxjs';
 import { catchError } from 'rxjs/operators';
 
-import { JwtService } from '../jwt/jwt.service';
-import { HttpService } from '../http/http.service';
+import { environment } from '../../../environments/environment';
 
+import { JwtService } from '../jwt/jwt.service';
+
+// Interfaz
 import { IResponse } from '../../interfaces/IResponse';
 import { IRequestOptions } from 'src/app/interfaces/IRequestOptions';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class ApiService {
-  constructor(private http: HttpService, private jwtService: JwtService) {}
+  private jwt: JwtService;
+
+  constructor(private http: HttpClient) {
+    console.log('API Service init...');
+  }
 
   private formatErrors(error: any) {
     return throwError(error.error);
   }
 
-  get(path: string, options?: IRequestOptions): Observable<IResponse> {
-    const token = this.jwtService.getToken();
-    if (token) {
-      options.headers = options.headers.set(
-        'Authentication',
-        this.jwtService.token
-      );
-    }
+  public Get(path: string, options?: IRequestOptions): Observable<IResponse> {
+    // const token = this.jwt.getToken();
+    // if (token) {
+    //   options.headers = options.headers.set('Authentication', token);
+    // }
+    console.log(path);
     return this.http
-      .get<IResponse>(`${environment.api.endpoint}${path}`, options)
+      .get<IResponse>(`${environment.api.endpoint}${path}`, options);
+      // .pipe(catchError(this.formatErrors));
+  }
+
+  public Put( path: string, params: Object = {}, options?: IRequestOptions ): Observable<IResponse> {
+    return this.http
+      .put<IResponse>(`${environment.api.endpoint}${path}`, JSON.stringify(params), options)
       .pipe(catchError(this.formatErrors));
   }
 
-  put(
-    path: string,
-    body: Object = {},
-    options?: IRequestOptions
-  ): Observable<IResponse> {
+  public Post( path: string, params: Object = {}, options?: IRequestOptions ): Observable<IResponse> {
     return this.http
-      .put<IResponse>(
-        `${environment.api.endpoint}${path}`,
-        JSON.stringify(body),
-        options
-      )
+      .post<IResponse>(`${environment.api.endpoint}${path}`, JSON.stringify(params), options)
       .pipe(catchError(this.formatErrors));
   }
 
-  post(
-    path: string,
-    body: Object = {},
-    options?: IRequestOptions
-  ): Observable<IResponse> {
-    return this.http
-      .post<IResponse>(
-        `${environment.api.endpoint}${path}`,
-        JSON.stringify(body),
-        options
-      )
-      .pipe(catchError(this.formatErrors));
-  }
-
-  delete(path: string, options?: IRequestOptions): Observable<IResponse> {
+  public Delete( path: string, options?: IRequestOptions ): Observable<IResponse> {
     return this.http
       .delete<IResponse>(`${environment.api.endpoint}${path}`, options)
       .pipe(catchError(this.formatErrors));
