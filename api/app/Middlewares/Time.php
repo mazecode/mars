@@ -7,28 +7,15 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class Time
 {
-
-    /**
-     * API PRS7 Response way
-     *
-     * @param  \Psr\Http\Message\ServerRequestInterface $request  PSR7 request
-     * @param  \Psr\Http\Message\ResponseInterface      $response PSR7 response
-     * @param  callable                                 $next     Next middleware
-     *
-     * @return \Psr\Http\Message\ResponseInterface
-     */
     public function __invoke(Request $request, Response $response, $next)
     {
-        $start = microtime(true);
-
-        $response->getBody()->write("Time start: {$start} \n\n");
-
+        $server = $request->getServerParams();
+        if (!isset($server['REQUEST_TIME_FLOAT'])) {
+            $server['REQUEST_TIME_FLOAT'] = microtime(true);
+        }
         $response = $next($request, $response);
+        $time = (microtime(true) - $server['REQUEST_TIME_FLOAT']) * 1000;
 
-        $taken = microtime(true) - $start;
-
-        $response->getBody()->write("\n\nTime taken: {$taken}");
-
-        return $response;
+        return $response->withHeader('X-Response-Time', sprintf('%2.3fms', $time));
     }
 }

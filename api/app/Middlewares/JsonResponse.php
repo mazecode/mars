@@ -13,31 +13,22 @@ class JsonResponse
 
         if(empty(json_decode($body))) return $response;
         
-        $accept = $request->getHeader('Content-Type');
-        if (!$accept || !preg_match('#^application/([^+\s]+\+)?json#', implode(',', $accept))) {
-            $response = $response->setError(true)->withJson([], 406);
-        }
+        $response = $this->validateHeaders($request, $response);
 
         return $response
-            // ->withHeader('Access-Control-Allow-Origin', '*')
-            // ->withHeader('Access-Control-Allow-Headers', 'X-Requested-With, Content-Type, Accept, Origin, Authorization')
-            // ->withHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE, OPTIONS')
-            ->withHeader('X-Powered-By', '127.0.0.1');
+            ->withHeader('X-RateLimit-Limit', 30) // How many requests the user is allowed to make in an hour.
+            ->withHeader('X-RateLimit-Remaining', 11) // How many requests the user can make in the remaning time (before they exceed their rate limit).
+            ->withHeader('X-RateLimit-Reset', 44) // The time at which the rate limit will be reset (when they enter a new time period).
+            ->withHeader('X-Powered-By', 'Vodafone');
+    }
 
-            // 		// Development additions
-// 		if( getSetting( "environment" ) eq "development" ){
-// 			prc.response.addHeader( "x-current-route", event.getCurrentRoute() )
-// 				.addHeader( "x-current-routed-url", event.getCurrentRoutedURL() )
-// 				.addHeader( "x-current-routed-namespace", event.getCurrentRoutedNamespace() )
-// 				.addHeader( "x-current-event", event.getCurrentEvent() );
-// 		}
-// 		// end timer
-// 		prc.response.addHeader( "x-response-time", prc.response.getResponseTime() )
-// 				.addHeader( "x-cached-response", prc.response.getCachedResponse() );
-		
-// 		// Response Headers
-// 		for( var thisHeader in prc.response.getHeaders() ){
-// 			event.setHTTPHeader( name=thisHeader.name, value=thisHeader.value );
+    private function validateHeaders(Request $request, Response $response) {
+        $accept = $request->getHeader('Content-Type');
 
+        if (!$accept || !preg_match('#^application/([^+\s]+\+)?json#', implode(',', $accept))) {
+            $response = $response->addMessage('Headers not allowed')->setError(true)->withJson([], 406);
+        }
+
+        return $response;
     }
 }

@@ -26,14 +26,8 @@ export class ApiService {
   }
 
   public Get(path: string, options?: IRequestOptions): Observable<IResponse> {
-    // const token = this.jwt.getToken();
-    // if (token) {
-    //   options.headers = options.headers.set('Authentication', token);
-    // }
-    console.log(path);
-    return this.http
-      .get<IResponse>(`${environment.api.endpoint}${path}`, options);
-      // .pipe(catchError(this.formatErrors));
+    return this.http.get<IResponse>(`${environment.api.endpoint}${path}`, options)
+      .pipe(catchError(this.formatErrors));
   }
 
   public Put( path: string, params: Object = {}, options?: IRequestOptions ): Observable<IResponse> {

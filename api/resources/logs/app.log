@@ -179,3 +179,295 @@
 [2019-01-10 15:37:29] true.INFO: Users index [] {"uid":"fec4f99"}
 [2019-01-10 16:03:56] true.INFO: Users index [] {"uid":"6030481"}
 [2019-01-10 16:03:56] true.INFO: Slim-Skeleton '/' route [] {"uid":"c9c51ff"}
+[2019-01-11 11:56:19] true.INFO: Users index [] {"uid":"0e2c147"}
+[2019-01-11 11:56:21] true.INFO: Slim-Skeleton '/' route [] {"uid":"5ad4de1"}
+[2019-01-11 11:56:49] true.INFO: Users index [] {"uid":"983e611"}
+[2019-01-11 11:58:11] true.INFO: Users index [] {"uid":"3db8035"}
+[2019-01-11 12:05:14] true.INFO: Users index [] {"uid":"9a8aea9"}
+[2019-01-11 12:07:06] true.INFO: Users index [] {"uid":"de6538e"}
+[2019-01-11 12:08:29] true.INFO: Users index [] {"uid":"8e5d03a"}
+[2019-01-11 12:08:37] true.INFO: Users index [] {"uid":"5fe282a"}
+[2019-01-11 12:09:10] true.INFO: Users index [] {"uid":"a76f5d4"}
+[2019-01-11 12:09:36] true.INFO: Users index [] {"uid":"d83cbaf"}
+[2019-01-11 12:09:36] true.INFO: Slim-Skeleton '/' route [] {"uid":"85a6a6f"}
+[2019-01-11 12:10:13] true.INFO: Users index [] {"uid":"d03d443"}
+[2019-01-11 12:10:22] true.INFO: Users index [] {"uid":"17170ad"}
+[2019-01-11 12:10:32] true.INFO: Users index [] {"uid":"904ec20"}
+[2019-01-11 12:10:38] true.INFO: Users index [] {"uid":"6983561"}
+[2019-01-11 12:10:43] true.INFO: Users index [] {"uid":"7994f0b"}
+[2019-01-11 12:10:52] true.INFO: Users index [] {"uid":"d73b39f"}
+[2019-01-11 12:10:59] true.INFO: Users index [] {"uid":"1fa6333"}
+[2019-01-11 12:11:13] true.INFO: Users index [] {"uid":"74e0621"}
+[2019-01-11 12:11:17] true.INFO: Users index [] {"uid":"20c0da0"}
+[2019-01-11 12:11:23] true.INFO: Users index [] {"uid":"4c191a3"}
+[2019-01-11 12:11:57] true.INFO: Users index [] {"uid":"1f3c466"}
+[2019-01-11 12:12:05] true.INFO: Users index [] {"uid":"0deefe0"}
+[2019-01-11 12:12:22] true.INFO: Users index [] {"uid":"c608008"}
+[2019-01-11 12:12:32] true.INFO: Users index [] {"uid":"643c52d"}
+[2019-01-11 12:12:34] true.INFO: Users index [] {"uid":"25469f3"}
+[2019-01-11 12:12:44] true.INFO: Users index [] {"uid":"9024ab7"}
+[2019-01-11 12:12:52] true.INFO: Users index [] {"uid":"e9520dd"}
+[2019-01-11 12:14:00] true.INFO: Users index [] {"uid":"ac1fe10"}
+[2019-01-11 12:15:43] true.INFO: Users index [] {"uid":"cba089c"}
+[2019-01-11 12:16:01] true.INFO: Users index [] {"uid":"8d61f7e"}
+[2019-01-11 12:16:28] true.INFO: Users index [] {"uid":"f8c34b3"}
+[2019-01-11 12:22:52] true.INFO: Users index [] {"uid":"10b6942"}
+[2019-01-11 12:22:57] true.INFO: Users index [] {"uid":"aaed585"}
+[2019-01-11 12:23:05] true.INFO: Users index [] {"uid":"7a25888"}
+[2019-01-11 12:23:14] true.INFO: Users index [] {"uid":"79ddfce"}
+[2019-01-11 12:23:34] true.DEBUG: CORS analysis for request started. [] {"uid":"52182e9"}
+[2019-01-11 12:23:34] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"52182e9"}
+[2019-01-11 12:23:34] true.DEBUG: CORS analysis for request completed. [] {"uid":"52182e9"}
+[2019-01-11 12:23:34] true.INFO: Users index [] {"uid":"52182e9"}
+[2019-01-11 12:23:38] true.DEBUG: CORS analysis for request started. [] {"uid":"c922883"}
+[2019-01-11 12:23:38] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"c922883"}
+[2019-01-11 12:23:38] true.DEBUG: CORS analysis for request completed. [] {"uid":"c922883"}
+[2019-01-11 12:23:38] true.INFO: Users index [] {"uid":"c922883"}
+[2019-01-11 12:23:47] true.DEBUG: CORS analysis for request started. [] {"uid":"13c82f2"}
+[2019-01-11 12:23:47] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"13c82f2"}
+[2019-01-11 12:23:47] true.DEBUG: CORS analysis for request completed. [] {"uid":"13c82f2"}
+[2019-01-11 12:23:47] true.INFO: Users index [] {"uid":"13c82f2"}
+[2019-01-11 12:24:14] true.DEBUG: CORS analysis for request started. [] {"uid":"a5187a6"}
+[2019-01-11 12:24:14] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"a5187a6"}
+[2019-01-11 12:24:14] true.DEBUG: CORS analysis for request completed. [] {"uid":"a5187a6"}
+[2019-01-11 12:24:14] true.INFO: Users index [] {"uid":"a5187a6"}
+[2019-01-11 12:25:01] true.DEBUG: CORS analysis for request started. [] {"uid":"af72598"}
+[2019-01-11 12:25:01] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"af72598"}
+[2019-01-11 12:25:01] true.DEBUG: CORS analysis for request completed. [] {"uid":"af72598"}
+[2019-01-11 12:25:01] true.INFO: Users index [] {"uid":"af72598"}
+[2019-01-11 12:26:11] true.DEBUG: CORS analysis for request started. [] {"uid":"ef23675"}
+[2019-01-11 12:26:12] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"ef23675"}
+[2019-01-11 12:26:12] true.DEBUG: CORS analysis for request completed. [] {"uid":"ef23675"}
+[2019-01-11 12:26:12] true.INFO: Users index [] {"uid":"ef23675"}
+[2019-01-11 12:26:20] true.DEBUG: CORS analysis for request started. [] {"uid":"aa30e08"}
+[2019-01-11 12:26:20] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"aa30e08"}
+[2019-01-11 12:26:20] true.DEBUG: CORS analysis for request completed. [] {"uid":"aa30e08"}
+[2019-01-11 12:26:20] true.INFO: Users index [] {"uid":"aa30e08"}
+[2019-01-11 12:26:29] true.DEBUG: CORS analysis for request started. [] {"uid":"bbd9b49"}
+[2019-01-11 12:26:29] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"bbd9b49"}
+[2019-01-11 12:26:29] true.DEBUG: CORS analysis for request completed. [] {"uid":"bbd9b49"}
+[2019-01-11 12:26:29] true.INFO: Users index [] {"uid":"bbd9b49"}
+[2019-01-11 12:26:49] true.DEBUG: CORS analysis for request started. [] {"uid":"f736d1b"}
+[2019-01-11 12:26:49] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"f736d1b"}
+[2019-01-11 12:26:49] true.DEBUG: CORS analysis for request completed. [] {"uid":"f736d1b"}
+[2019-01-11 12:26:49] true.INFO: Users index [] {"uid":"f736d1b"}
+[2019-01-11 12:28:24] true.DEBUG: CORS analysis for request started. [] {"uid":"00336cd"}
+[2019-01-11 12:28:24] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"00336cd"}
+[2019-01-11 12:28:24] true.DEBUG: CORS analysis for request completed. [] {"uid":"00336cd"}
+[2019-01-11 12:28:24] true.INFO: Users index [] {"uid":"00336cd"}
+[2019-01-11 12:28:36] true.DEBUG: CORS analysis for request started. [] {"uid":"40599ae"}
+[2019-01-11 12:28:36] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"40599ae"}
+[2019-01-11 12:28:36] true.DEBUG: CORS analysis for request completed. [] {"uid":"40599ae"}
+[2019-01-11 12:28:36] true.INFO: Users index [] {"uid":"40599ae"}
+[2019-01-11 13:15:01] true.DEBUG: CORS analysis for request started. [] {"uid":"49d109a"}
+[2019-01-11 13:15:01] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"49d109a"}
+[2019-01-11 13:15:01] true.DEBUG: CORS analysis for request completed. [] {"uid":"49d109a"}
+[2019-01-11 13:15:01] true.INFO: Users index [] {"uid":"49d109a"}
+[2019-01-11 13:15:02] true.DEBUG: CORS analysis for request started. [] {"uid":"30d9a72"}
+[2019-01-11 13:15:02] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"30d9a72"}
+[2019-01-11 13:15:02] true.DEBUG: CORS analysis for request completed. [] {"uid":"30d9a72"}
+[2019-01-11 13:15:02] true.INFO: Slim-Skeleton '/' route [] {"uid":"30d9a72"}
+[2019-01-11 13:15:03] true.DEBUG: CORS analysis for request started. [] {"uid":"e8012b8"}
+[2019-01-11 13:15:03] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"e8012b8"}
+[2019-01-11 13:15:03] true.DEBUG: CORS analysis for request completed. [] {"uid":"e8012b8"}
+[2019-01-11 13:15:03] true.INFO: Users index [] {"uid":"e8012b8"}
+[2019-01-11 13:22:10] true.DEBUG: CORS analysis for request started. [] {"uid":"88407d1"}
+[2019-01-11 13:22:10] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"88407d1"}
+[2019-01-11 13:22:10] true.DEBUG: CORS analysis for request completed. [] {"uid":"88407d1"}
+[2019-01-11 13:22:10] true.INFO: Users index [] {"uid":"88407d1"}
+[2019-01-11 13:23:28] true.DEBUG: CORS analysis for request started. [] {"uid":"fde256f"}
+[2019-01-11 13:23:28] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"fde256f"}
+[2019-01-11 13:23:28] true.DEBUG: CORS analysis for request completed. [] {"uid":"fde256f"}
+[2019-01-11 13:23:28] true.INFO: Users index [] {"uid":"fde256f"}
+[2019-01-11 13:23:37] true.DEBUG: CORS analysis for request started. [] {"uid":"885beb2"}
+[2019-01-11 13:23:37] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"885beb2"}
+[2019-01-11 13:23:37] true.DEBUG: CORS analysis for request completed. [] {"uid":"885beb2"}
+[2019-01-11 13:23:37] true.INFO: Users index [] {"uid":"885beb2"}
+[2019-01-11 13:24:31] true.DEBUG: CORS analysis for request started. [] {"uid":"7773832"}
+[2019-01-11 13:24:31] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"7773832"}
+[2019-01-11 13:24:31] true.DEBUG: CORS analysis for request completed. [] {"uid":"7773832"}
+[2019-01-11 13:24:31] true.INFO: Users index [] {"uid":"7773832"}
+[2019-01-11 13:24:58] true.DEBUG: CORS analysis for request started. [] {"uid":"6a19402"}
+[2019-01-11 13:24:58] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"6a19402"}
+[2019-01-11 13:24:58] true.DEBUG: CORS analysis for request completed. [] {"uid":"6a19402"}
+[2019-01-11 13:24:58] true.INFO: Users index [] {"uid":"6a19402"}
+[2019-01-11 13:25:18] true.DEBUG: CORS analysis for request started. [] {"uid":"86fac02"}
+[2019-01-11 13:25:18] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"86fac02"}
+[2019-01-11 13:25:18] true.DEBUG: CORS analysis for request completed. [] {"uid":"86fac02"}
+[2019-01-11 13:25:18] true.DEBUG: CORS analysis for request started. [] {"uid":"46c5156"}
+[2019-01-11 13:25:18] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"46c5156"}
+[2019-01-11 13:25:18] true.DEBUG: CORS analysis for request completed. [] {"uid":"46c5156"}
+[2019-01-11 13:25:18] true.INFO: Users index [] {"uid":"46c5156"}
+[2019-01-11 13:25:51] true.DEBUG: CORS analysis for request started. [] {"uid":"1878ad6"}
+[2019-01-11 13:25:51] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"1878ad6"}
+[2019-01-11 13:25:51] true.DEBUG: CORS analysis for request completed. [] {"uid":"1878ad6"}
+[2019-01-11 13:25:51] true.DEBUG: CORS analysis for request started. [] {"uid":"f58e312"}
+[2019-01-11 13:25:51] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"f58e312"}
+[2019-01-11 13:25:51] true.DEBUG: CORS analysis for request completed. [] {"uid":"f58e312"}
+[2019-01-11 13:25:51] true.INFO: Users index [] {"uid":"f58e312"}
+[2019-01-11 13:32:07] true.DEBUG: CORS analysis for request started. [] {"uid":"5108a10"}
+[2019-01-11 13:32:07] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"5108a10"}
+[2019-01-11 13:32:07] true.DEBUG: CORS analysis for request completed. [] {"uid":"5108a10"}
+[2019-01-11 13:32:07] true.DEBUG: CORS analysis for request started. [] {"uid":"cb4c4d2"}
+[2019-01-11 13:32:07] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"cb4c4d2"}
+[2019-01-11 13:32:07] true.DEBUG: CORS analysis for request completed. [] {"uid":"cb4c4d2"}
+[2019-01-11 13:32:07] true.INFO: Users index [] {"uid":"cb4c4d2"}
+[2019-01-11 13:32:27] true.DEBUG: CORS analysis for request started. [] {"uid":"9079252"}
+[2019-01-11 13:32:27] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"9079252"}
+[2019-01-11 13:32:27] true.DEBUG: CORS analysis for request completed. [] {"uid":"9079252"}
+[2019-01-11 13:32:28] true.DEBUG: CORS analysis for request started. [] {"uid":"45fecb8"}
+[2019-01-11 13:32:28] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"45fecb8"}
+[2019-01-11 13:32:28] true.DEBUG: CORS analysis for request completed. [] {"uid":"45fecb8"}
+[2019-01-11 13:32:28] true.INFO: Users index [] {"uid":"45fecb8"}
+[2019-01-11 13:33:19] true.DEBUG: CORS analysis for request started. [] {"uid":"b920956"}
+[2019-01-11 13:33:19] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"b920956"}
+[2019-01-11 13:33:19] true.INFO: Request header is not allowed. Check config settings for Allowed Headers. {"header":"content-type"} {"uid":"b920956"}
+[2019-01-11 13:33:19] true.DEBUG: CORS analysis for request completed. [] {"uid":"b920956"}
+[2019-01-11 13:34:50] true.DEBUG: CORS analysis for request started. [] {"uid":"66c0ba1"}
+[2019-01-11 13:34:50] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"66c0ba1"}
+[2019-01-11 13:34:50] true.INFO: Request header is not allowed. Check config settings for Allowed Headers. {"header":"content-type"} {"uid":"66c0ba1"}
+[2019-01-11 13:34:50] true.DEBUG: CORS analysis for request completed. [] {"uid":"66c0ba1"}
+[2019-01-11 13:36:19] true.DEBUG: CORS analysis for request started. [] {"uid":"21e9dd7"}
+[2019-01-11 13:36:19] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"21e9dd7"}
+[2019-01-11 13:36:19] true.INFO: Request header is not allowed. Check config settings for Allowed Headers. {"header":"content-type"} {"uid":"21e9dd7"}
+[2019-01-11 13:36:19] true.DEBUG: CORS analysis for request completed. [] {"uid":"21e9dd7"}
+[2019-01-11 13:36:24] true.DEBUG: CORS analysis for request started. [] {"uid":"98a4c10"}
+[2019-01-11 13:36:24] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"98a4c10"}
+[2019-01-11 13:36:24] true.INFO: Request header is not allowed. Check config settings for Allowed Headers. {"header":"content-type"} {"uid":"98a4c10"}
+[2019-01-11 13:36:24] true.DEBUG: CORS analysis for request completed. [] {"uid":"98a4c10"}
+[2019-01-11 13:36:27] true.DEBUG: CORS analysis for request started. [] {"uid":"b728365"}
+[2019-01-11 13:36:27] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"b728365"}
+[2019-01-11 13:36:27] true.INFO: Request header is not allowed. Check config settings for Allowed Headers. {"header":"content-type"} {"uid":"b728365"}
+[2019-01-11 13:36:27] true.DEBUG: CORS analysis for request completed. [] {"uid":"b728365"}
+[2019-01-11 13:36:31] true.DEBUG: CORS analysis for request started. [] {"uid":"2ceba60"}
+[2019-01-11 13:36:31] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"2ceba60"}
+[2019-01-11 13:36:31] true.INFO: Request header is not allowed. Check config settings for Allowed Headers. {"header":"content-type"} {"uid":"2ceba60"}
+[2019-01-11 13:36:31] true.DEBUG: CORS analysis for request completed. [] {"uid":"2ceba60"}
+[2019-01-11 13:36:40] true.DEBUG: CORS analysis for request started. [] {"uid":"7b0a7f4"}
+[2019-01-11 13:36:40] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"7b0a7f4"}
+[2019-01-11 13:36:40] true.INFO: Request header is not allowed. Check config settings for Allowed Headers. {"header":"content-type"} {"uid":"7b0a7f4"}
+[2019-01-11 13:36:40] true.DEBUG: CORS analysis for request completed. [] {"uid":"7b0a7f4"}
+[2019-01-11 13:36:42] true.DEBUG: CORS analysis for request started. [] {"uid":"39f098f"}
+[2019-01-11 13:36:42] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"39f098f"}
+[2019-01-11 13:36:42] true.INFO: Request header is not allowed. Check config settings for Allowed Headers. {"header":"content-type"} {"uid":"39f098f"}
+[2019-01-11 13:36:42] true.DEBUG: CORS analysis for request completed. [] {"uid":"39f098f"}
+[2019-01-11 13:37:27] true.INFO: Users index [] {"uid":"d676231"}
+[2019-01-11 13:40:28] true.INFO: Users index [] {"uid":"f0c592b"}
+[2019-01-11 13:40:38] true.INFO: Users index [] {"uid":"e16d6e4"}
+[2019-01-11 13:40:47] true.INFO: Users index [] {"uid":"d350785"}
+[2019-01-11 13:43:40] true.INFO: Users index [] {"uid":"69032c2"}
+[2019-01-11 13:43:40] true.INFO: Slim-Skeleton '/' route [] {"uid":"31ddb60"}
+[2019-01-11 13:43:55] true.INFO: Users index [] {"uid":"471ca77"}
+[2019-01-11 13:43:55] true.INFO: Slim-Skeleton '/' route [] {"uid":"52f9029"}
+[2019-01-11 13:44:12] true.INFO: Users index [] {"uid":"0571702"}
+[2019-01-11 13:44:12] true.INFO: Slim-Skeleton '/' route [] {"uid":"8f6a01e"}
+[2019-01-11 13:44:17] true.INFO: Users index [] {"uid":"957a10e"}
+[2019-01-11 13:44:18] true.INFO: Slim-Skeleton '/' route [] {"uid":"e6c0def"}
+[2019-01-11 13:44:31] true.INFO: Users index [] {"uid":"941f420"}
+[2019-01-11 13:44:31] true.INFO: Slim-Skeleton '/' route [] {"uid":"4bee4a8"}
+[2019-01-11 13:44:34] true.INFO: Users index [] {"uid":"5021189"}
+[2019-01-11 13:47:46] true.INFO: Users index [] {"uid":"3cc3e6c"}
+[2019-01-11 13:47:50] true.INFO: Users index [] {"uid":"faa189d"}
+[2019-01-11 13:48:02] true.INFO: Users index [] {"uid":"985bfe3"}
+[2019-01-11 13:48:05] true.INFO: Users index [] {"uid":"d4fed6c"}
+[2019-01-11 13:48:08] true.INFO: Users index [] {"uid":"04bf2a3"}
+[2019-01-11 13:48:08] true.INFO: Slim-Skeleton '/' route [] {"uid":"2a2c525"}
+[2019-01-11 13:48:58] true.DEBUG: CORS analysis for request started. [] {"uid":"c12f441"}
+[2019-01-11 13:48:58] true.INFO: Request origin is not allowed. Check config settings for Allowed Origins. {"origin":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: http://localhost:4200)"} {"uid":"c12f441"}
+[2019-01-11 13:48:58] true.DEBUG: CORS analysis for request completed. [] {"uid":"c12f441"}
+[2019-01-11 13:49:14] true.DEBUG: CORS analysis for request started. [] {"uid":"d3b5393"}
+[2019-01-11 13:49:14] true.INFO: Request origin is not allowed. Check config settings for Allowed Origins. {"origin":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: http://localhost:4200)"} {"uid":"d3b5393"}
+[2019-01-11 13:49:14] true.DEBUG: CORS analysis for request completed. [] {"uid":"d3b5393"}
+[2019-01-11 13:49:29] true.DEBUG: CORS analysis for request started. [] {"uid":"70d73c2"}
+[2019-01-11 13:49:29] true.INFO: Request origin is not allowed. Check config settings for Allowed Origins. {"origin":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: http://localhost:4200)"} {"uid":"70d73c2"}
+[2019-01-11 13:49:29] true.DEBUG: CORS analysis for request completed. [] {"uid":"70d73c2"}
+[2019-01-11 13:49:42] true.DEBUG: CORS analysis for request started. [] {"uid":"d4e24fb"}
+[2019-01-11 13:49:42] true.INFO: Request origin is not allowed. Check config settings for Allowed Origins. {"origin":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: http://localhost:4200)"} {"uid":"d4e24fb"}
+[2019-01-11 13:49:42] true.DEBUG: CORS analysis for request completed. [] {"uid":"d4e24fb"}
+[2019-01-11 13:52:49] true.DEBUG: CORS analysis for request started. [] {"uid":"95040c8"}
+[2019-01-11 13:52:49] true.INFO: Request origin is not allowed. Check config settings for Allowed Origins. {"origin":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: http://localhost:4200)"} {"uid":"95040c8"}
+[2019-01-11 13:52:49] true.DEBUG: CORS analysis for request completed. [] {"uid":"95040c8"}
+[2019-01-11 13:52:54] true.DEBUG: CORS analysis for request started. [] {"uid":"b5f79b4"}
+[2019-01-11 13:52:54] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"b5f79b4"}
+[2019-01-11 13:52:54] true.DEBUG: CORS analysis for request completed. [] {"uid":"b5f79b4"}
+[2019-01-11 13:52:54] true.INFO: Users index [] {"uid":"b5f79b4"}
+[2019-01-11 13:52:54] true.DEBUG: CORS analysis for request started. [] {"uid":"3721d72"}
+[2019-01-11 13:52:54] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"3721d72"}
+[2019-01-11 13:52:54] true.DEBUG: CORS analysis for request completed. [] {"uid":"3721d72"}
+[2019-01-11 13:52:54] true.INFO: Slim-Skeleton '/' route [] {"uid":"3721d72"}
+[2019-01-11 13:52:55] true.DEBUG: CORS analysis for request started. [] {"uid":"590c53c"}
+[2019-01-11 13:52:55] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"590c53c"}
+[2019-01-11 13:52:55] true.DEBUG: CORS analysis for request completed. [] {"uid":"590c53c"}
+[2019-01-11 13:52:55] true.INFO: Users index [] {"uid":"590c53c"}
+[2019-01-11 13:52:56] true.DEBUG: CORS analysis for request started. [] {"uid":"df381b9"}
+[2019-01-11 13:52:56] true.INFO: Request is not CORS (request origin is empty). {"request":null,"server":"[object] (Neomerx\\Cors\\Http\\ParsedUrl: //)"} {"uid":"df381b9"}
+[2019-01-11 13:52:56] true.DEBUG: CORS analysis for request completed. [] {"uid":"df381b9"}
+[2019-01-11 13:52:56] true.INFO: Slim-Skeleton '/' route [] {"uid":"df381b9"}
+[2019-01-11 13:53:21] true.DEBUG: CORS analysis for request started. [] {"uid":"a8412e8"}
+[2019-01-11 13:53:21] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"a8412e8"}
+[2019-01-11 13:53:21] true.INFO: Request header is not allowed. Check config settings for Allowed Headers. {"header":"content-type"} {"uid":"a8412e8"}
+[2019-01-11 13:53:21] true.DEBUG: CORS analysis for request completed. [] {"uid":"a8412e8"}
+[2019-01-11 14:01:43] true.DEBUG: CORS analysis for request started. [] {"uid":"efa96d5"}
+[2019-01-11 14:01:43] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"efa96d5"}
+[2019-01-11 14:01:43] true.DEBUG: CORS analysis for request completed. [] {"uid":"efa96d5"}
+[2019-01-11 14:01:43] true.DEBUG: CORS analysis for request started. [] {"uid":"8cf7664"}
+[2019-01-11 14:01:43] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"8cf7664"}
+[2019-01-11 14:01:43] true.DEBUG: CORS analysis for request completed. [] {"uid":"8cf7664"}
+[2019-01-11 14:01:43] true.INFO: Users index [] {"uid":"8cf7664"}
+[2019-01-11 14:01:47] true.DEBUG: CORS analysis for request started. [] {"uid":"79e2f4b"}
+[2019-01-11 14:01:47] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"79e2f4b"}
+[2019-01-11 14:01:47] true.DEBUG: CORS analysis for request completed. [] {"uid":"79e2f4b"}
+[2019-01-11 14:01:47] true.INFO: Users index [] {"uid":"79e2f4b"}
+[2019-01-11 14:02:03] true.DEBUG: CORS analysis for request started. [] {"uid":"9453004"}
+[2019-01-11 14:02:03] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"9453004"}
+[2019-01-11 14:02:03] true.INFO: Request header is not allowed. Check config settings for Allowed Headers. {"header":"content-type"} {"uid":"9453004"}
+[2019-01-11 14:02:03] true.DEBUG: CORS analysis for request completed. [] {"uid":"9453004"}
+[2019-01-11 14:02:08] true.DEBUG: CORS analysis for request started. [] {"uid":"dc37976"}
+[2019-01-11 14:02:08] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"dc37976"}
+[2019-01-11 14:02:08] true.DEBUG: CORS analysis for request completed. [] {"uid":"dc37976"}
+[2019-01-11 14:02:09] true.DEBUG: CORS analysis for request started. [] {"uid":"430c835"}
+[2019-01-11 14:02:09] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"430c835"}
+[2019-01-11 14:02:09] true.DEBUG: CORS analysis for request completed. [] {"uid":"430c835"}
+[2019-01-11 14:02:09] true.INFO: Users index [] {"uid":"430c835"}
+[2019-01-11 14:02:14] true.DEBUG: CORS analysis for request started. [] {"uid":"f011042"}
+[2019-01-11 14:02:14] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"f011042"}
+[2019-01-11 14:02:14] true.DEBUG: CORS analysis for request completed. [] {"uid":"f011042"}
+[2019-01-11 14:02:14] true.DEBUG: CORS analysis for request started. [] {"uid":"1d7d0ab"}
+[2019-01-11 14:02:14] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"1d7d0ab"}
+[2019-01-11 14:02:14] true.DEBUG: CORS analysis for request completed. [] {"uid":"1d7d0ab"}
+[2019-01-11 14:02:14] true.INFO: Users index [] {"uid":"1d7d0ab"}
+[2019-01-11 14:02:32] true.DEBUG: CORS analysis for request started. [] {"uid":"ecc5bd4"}
+[2019-01-11 14:02:32] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"ecc5bd4"}
+[2019-01-11 14:02:32] true.DEBUG: CORS analysis for request completed. [] {"uid":"ecc5bd4"}
+[2019-01-11 14:02:33] true.DEBUG: CORS analysis for request started. [] {"uid":"25b565c"}
+[2019-01-11 14:02:33] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"25b565c"}
+[2019-01-11 14:02:33] true.DEBUG: CORS analysis for request completed. [] {"uid":"25b565c"}
+[2019-01-11 14:02:33] true.INFO: Users index [] {"uid":"25b565c"}
+[2019-01-11 14:02:38] true.DEBUG: CORS analysis for request started. [] {"uid":"f2f43b4"}
+[2019-01-11 14:02:38] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"f2f43b4"}
+[2019-01-11 14:02:38] true.DEBUG: CORS analysis for request completed. [] {"uid":"f2f43b4"}
+[2019-01-11 14:02:39] true.DEBUG: CORS analysis for request started. [] {"uid":"e0af167"}
+[2019-01-11 14:02:39] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"e0af167"}
+[2019-01-11 14:02:39] true.DEBUG: CORS analysis for request completed. [] {"uid":"e0af167"}
+[2019-01-11 14:02:39] true.INFO: Users index [] {"uid":"e0af167"}
+[2019-01-11 14:02:45] true.DEBUG: CORS analysis for request started. [] {"uid":"74a3819"}
+[2019-01-11 14:02:45] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"74a3819"}
+[2019-01-11 14:02:45] true.DEBUG: CORS analysis for request completed. [] {"uid":"74a3819"}
+[2019-01-11 14:02:46] true.DEBUG: CORS analysis for request started. [] {"uid":"967630a"}
+[2019-01-11 14:02:46] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"967630a"}
+[2019-01-11 14:02:46] true.DEBUG: CORS analysis for request completed. [] {"uid":"967630a"}
+[2019-01-11 14:02:46] true.INFO: Users index [] {"uid":"967630a"}
+[2019-01-11 14:02:57] true.DEBUG: CORS analysis for request started. [] {"uid":"15006f3"}
+[2019-01-11 14:02:57] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"15006f3"}
+[2019-01-11 14:02:57] true.DEBUG: CORS analysis for request completed. [] {"uid":"15006f3"}
+[2019-01-11 14:02:58] true.DEBUG: CORS analysis for request started. [] {"uid":"ca7edbe"}
+[2019-01-11 14:02:58] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"ca7edbe"}
+[2019-01-11 14:02:58] true.DEBUG: CORS analysis for request completed. [] {"uid":"ca7edbe"}
+[2019-01-11 14:02:58] true.INFO: Users index [] {"uid":"ca7edbe"}
+[2019-01-11 14:03:16] true.DEBUG: CORS analysis for request started. [] {"uid":"36fa593"}
+[2019-01-11 14:03:16] true.DEBUG: Request is identified as a pre-flight CORS request. [] {"uid":"36fa593"}
+[2019-01-11 14:03:16] true.DEBUG: CORS analysis for request completed. [] {"uid":"36fa593"}
+[2019-01-11 14:03:17] true.DEBUG: CORS analysis for request started. [] {"uid":"2b64099"}
+[2019-01-11 14:03:17] true.DEBUG: Request is identified as an actual CORS request. [] {"uid":"2b64099"}
+[2019-01-11 14:03:17] true.DEBUG: CORS analysis for request completed. [] {"uid":"2b64099"}
+[2019-01-11 14:03:17] true.INFO: Users index [] {"uid":"2b64099"}

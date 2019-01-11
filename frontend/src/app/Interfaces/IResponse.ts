@@ -1,6 +1,6 @@
 export interface IResponse {
   data: any;
-  messages: string[];
+  messages: Array<string>;
   error: boolean;
   code: number;
   status: string;

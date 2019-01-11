@@ -15,14 +15,14 @@ export class HeadersInterceptor implements HttpInterceptor {
   }
 
   intercept( request: HttpRequest<any>, next: HttpHandler ): Observable<HttpEvent<any>> {
-    // request = request.clone({
-    //   setHeaders: {
-    //     'Access-Control-Allow-Origin': '*',
-    //     'X-Custom-Header': 'Agent-007',
-    //     'Content-type': 'application/json'
-    //   }
-    // });
-    // console.log(request);
+    request = request.clone({
+      setHeaders: {
+        'Access-Control-Allow-Origin': '*',
+        'X-Custom-Header': 'Agent-007',
+        'Content-type': 'application/json;charset=utf-8'
+      }
+    });
+    console.log(request);
     return next.handle(request);
   }
 }

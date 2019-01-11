@@ -6,7 +6,6 @@ use App\Helper\Acl;
 */
 class AuthMiddleware
 {
-	
 	public $session;
 
 	public function __construct()
