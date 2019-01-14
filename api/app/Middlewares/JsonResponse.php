@@ -9,10 +9,10 @@ class JsonResponse
     {
         $response = $next($request, $response);
 
-        $body = (string) $response->getBody();
+        $body = (string)$response->getBody();
 
-        if(empty(json_decode($body))) return $response;
-        
+        if (empty(json_decode($body))) return $response;
+
         $response = $this->validateHeaders($request, $response);
 
         return $response
@@ -22,7 +22,8 @@ class JsonResponse
             ->withHeader('X-Powered-By', 'Vodafone');
     }
 
-    private function validateHeaders(Request $request, Response $response) {
+    private function validateHeaders(Request $request, Response $response)
+    {
         $accept = $request->getHeader('Content-Type');
 
         if (!$accept || !preg_match('#^application/([^+\s]+\+)?json#', implode(',', $accept))) {

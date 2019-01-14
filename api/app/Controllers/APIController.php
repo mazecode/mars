@@ -10,7 +10,7 @@ class APIController extends BaseController
     public function index(Request $request, Response $response, array $args)
     {
         $this->container->logger->info("Users index");
-        
+
         $users = ToolUser::all();
 
         return $response->withJson($users);
@@ -18,16 +18,17 @@ class APIController extends BaseController
 
     public function get(Request $request, Response $response, array $args)
     {
-        try {
-            $users = ToolUser::findOrFail((int)$request->getAttribute('id'));
 
-            return $response->withJson($users);
+        try {
+            $user = ToolUser::findOrFail((int)$request->getAttribute('id'));
+
+            return $response->withJson($user);
         } catch (\Exception $ex) {
             return $response
                 ->setError(true)
                 ->addMessage('User not found')
                 ->addMessage(getenv('APP_DEBUG') ? $ex->getMessage() : '')
-                ->withJson([], 204);
+                ->withJson([], 502);
         }
     }
 

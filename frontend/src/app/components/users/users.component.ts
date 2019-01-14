@@ -4,7 +4,7 @@ import { ActivatedRoute } from '@angular/router';
 import { NGXLogger } from 'ngx-logger';
 
 import { UserService } from '../../services/user/user.service';
-import { ApiService } from '../../services/api/api.service';
+// import { ApiService } from '../../services/api/api.service';
 
 @Component({
   selector: 'app-users',
@@ -14,14 +14,18 @@ import { ApiService } from '../../services/api/api.service';
 export class UsersComponent implements OnInit {
   user: any = {};
 
-  constructor(private logger: NGXLogger, private aRoute: ActivatedRoute, private api: ApiService) {
+  constructor(
+    private logger: NGXLogger,
+    private aRoute: ActivatedRoute,
+    private service: UserService
+  ) {
     this.logger.debug('Users Component init...');
-    console.log(api);
+    console.log(service);
 
-    // this.aRoute.params.subscribe(params => {
-    //   console.log(params['id']);
-    //   // this.sUser.get(params['id']);
-    // });
+    this.aRoute.params.subscribe(params => {
+      console.log(params['id']);
+      this.service.get(params['id']);
+    });
   }
 
   ngOnInit() {}

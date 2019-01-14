@@ -4,8 +4,8 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class JwtService {
-  constructor(private token: string) {
-      this.token = token;
+  constructor() {
+    console.log('JWT Service init...');
   }
 
   getToken(): string {

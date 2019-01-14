@@ -1,6 +1,12 @@
 <?php
 // d(isset($_ENV['docker']) ? 'php://stdout' : __DIR__ . '/../logs/api.log');
 return [
+    'constants' => [
+        'USER_DELETED' => 'Usuario eliminado correctamente',
+        //to do: Mayusculas todos
+        'secretKey' => '%ERG%T87Tth5&Y&//2343rdD',
+        'masterPassword' => 'm4r5p4r4t0d0s_2oi7',
+    ],
     'settings' => [
         "app" => [
             "name" => getenv('APP_NAME'),

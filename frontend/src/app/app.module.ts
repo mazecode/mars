@@ -23,9 +23,11 @@ import { AuthInterceptor } from './interceptors/auth';
 import { HeadersInterceptor } from './interceptors/headers';
 import { ServerLocationInterceptor } from './interceptors/server';
 import { CustomHttpInterceptor } from './interceptors/http';
+import { LoginComponent } from './components/login/login.component';
 
 const routes: Routes = [
-  { path: '', component: HomeComponent },
+  { path: '', component: LoginComponent },
+  { path: 'home', component: HomeComponent },
   { path: 'users/:id', component: UsersComponent },
   { path: '404', component: Page404Component },
   { path: '**', redirectTo: '404', pathMatch: 'full' }
@@ -38,7 +40,8 @@ const routes: Routes = [
     FooterComponent,
     Page404Component,
     HomeComponent,
-    UsersComponent
+    UsersComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,

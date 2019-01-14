@@ -15,8 +15,6 @@ import { IRequestOptions } from 'src/app/interfaces/IRequestOptions';
   providedIn: 'root',
 })
 export class ApiService {
-  private jwt: JwtService;
-
   constructor(private http: HttpClient) {
     console.log('API Service init...');
   }

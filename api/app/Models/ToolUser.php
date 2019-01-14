@@ -11,7 +11,26 @@ class ToolUser extends Base
     ];
     protected $fillable = [
         'name',
+        'surnames',
+        'email',
+        'username',
+        'password',
+        'acd',
+        'team_leader',
+        'agency',
+        'service',
+        'segment',
+        'active',
+        'id_role',
+        'location',
+        'is_fijo',
+        'team_admin',
         'created_at',
         'updated_at'
     ];
+
+    public function setUsernameAttribute($value)
+    {
+        $this->attributes['username'] = strtolower($value);
+    }
 }
