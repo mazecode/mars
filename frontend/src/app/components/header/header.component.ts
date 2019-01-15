@@ -7,16 +7,18 @@ import { AuthService } from '../../services/auth/auth.service';
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
-  providers: [SessionService]
+  // providers: [AuthService, SessionService]
 })
 export class HeaderComponent implements OnInit {
   currentUser: IUser;
 
   constructor(private session: SessionService, private auth: AuthService) {
-    this.currentUser = this.auth.getCurrentUser();
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.currentUser = this.session.getCurrentUser();
+    // this.currentUser = this.auth.getCurrentUser();
+  }
 
   public logout() {
     this.auth.logout();

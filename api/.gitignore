@@ -1,4 +1,10 @@
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
 .env
-vendor/
-resources/logs
-# !resources/logs/README.md
+/vendor
+/resources/logs
