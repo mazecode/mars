@@ -1,44 +1,47 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-// import { Observable } from 'rxjs';
-// import { map } from 'rxjs/operators';
-// import { IUser } from '../interfaces/IUser';
+
 import { JwtService } from '../jwt/jwt.service';
-import { environment } from 'src/environments/environment';
+import { ApiService } from '../api/api.service';
+import { IUser } from '../../interfaces/IUser';
+import { SessionService } from '../session/session.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class AuthService {
-  public token: string;
-  private url = `${environment.api.endpoint}/auth/login`;
+  currentUser: IUser;
 
-  constructor(private http: HttpClient, private jwt: JwtService) {
-    const currentUser = JSON.parse(localStorage.getItem('currentUser'));
-    this.token = currentUser && currentUser.token;
+  constructor(
+    private service: ApiService,
+    private jwt: JwtService,
+    private session: SessionService
+  ) {}
 
-    jwt.saveToken(this.token);
+  public async login(username: string, password: string) {
+    const response = await this.service.Post('/login', { username, password });
+
+    if (response.code === 200 || !response.error) {
+      this.session.saveCurrentUser(response.data.user);
+      this.jwt.saveToken(response.data.token);
+
+      return true;
+    }
+
+    return false;
   }
 
-  // login(username: string, password: string): Observable<any> {
-  // return this.http.post<any>(this.url, { username: username, password: password })
-  //   .pipe(
-  //     map(user => {
-  //       // login bem-sucedido se houver um token jwt na resposta
-  //       if (user && user.token) {
-  //         // armazenar detalhes do usuário e token jwt no localStorage para manter o usuário logado entre as atualizações da página
-  //         localStorage.setItem('currentUser', JSON.stringify(user));
-  //       }
+  public logout(): void {
+    this.session.destroyCurrentUser();
+    this.jwt.destroyToken();
+  }
 
-  //       return user;
-  //     })
-  //   );
-  // return Observable<any>;
-  // }
+  public isLogged() {
+    const cu = this.session.getCurrentUser();
+    const t = this.jwt.getToken();
+    if (cu && t) {
+      return true;
+    }
 
-  logout(): void {
-    // // Limpa o token removendo o usuário do local store para efetuar o logout
-    // this.token = null;
-    // localStorage.removeItem('currentUser');
+    return false;
   }
 }

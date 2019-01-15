@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NGXLogger } from 'ngx-logger';
+import { AuthService } from './services/auth/auth.service';
+import { IUser } from './interfaces/IUser';
 
 @Component({
   selector: 'app-root',
@@ -7,7 +9,18 @@ import { NGXLogger } from 'ngx-logger';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  constructor(private logger: NGXLogger) {
+  currentUser: IUser;
+
+  constructor(private logger: NGXLogger, private authS: AuthService) {
     this.logger.debug('APP init...');
+    this.currentUser = this.authS.currentUser;
+  }
+
+  OnInit() {
+    console.log('INITTTT');
+  }
+
+  public logout() {
+    this.authS.logout();
   }
 }

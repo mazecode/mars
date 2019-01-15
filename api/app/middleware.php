@@ -1,11 +1,10 @@
 <?php
 
-// $app->add(new \Slim\Csrf\Guard);
 $app->add(new App\Middlewares\Time);
 $app->add(new Tuupola\Middleware\CorsMiddleware([
     "origin" => ["*"],
     "methods" => ["GET", "POST", "PUT", "PATCH", "DELETE"],
-    "headers.allow" => ["Content-Type", "Accept", "X-Auth-Token", "Origin", "X-Requested-With", ],
+    "headers.allow" => ["Authorization", "Content-Type", "Accept", "X-Auth-Token", "Origin", "X-Requested-With", ],
     "headers.expose" => [],
     "credentials" => false,
     "cache" => 0,
@@ -18,5 +17,6 @@ $app->add(new Tuupola\Middleware\CorsMiddleware([
     }
 ]));
 $app->add(new App\Middlewares\JsonResponse);
-
+    
 // https://github.com/oscarotero/psr7-middlewares
+// $app->add(new \Slim\Csrf\Guard);

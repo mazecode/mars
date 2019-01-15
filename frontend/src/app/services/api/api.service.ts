@@ -12,37 +12,62 @@ import { IResponse } from '../../interfaces/IResponse';
 import { IRequestOptions } from 'src/app/interfaces/IRequestOptions';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
 export class ApiService {
-  constructor(private http: HttpClient) {
-    console.log('API Service init...');
-  }
+  constructor(private http: HttpClient) {}
 
   private formatErrors(error: any) {
     return throwError(error.error);
   }
 
-  public Get(path: string, options?: IRequestOptions): Observable<IResponse> {
-    return this.http.get<IResponse>(`${environment.api.endpoint}${path}`, options)
-      .pipe(catchError(this.formatErrors));
+  public async Get(path: string, options?: IRequestOptions) {
+    return this.http
+      .get<IResponse>(`${environment.api.endpoint}${path}`, options)
+      .pipe(catchError(this.formatErrors))
+      .toPromise();
   }
 
-  public Put( path: string, params: Object = {}, options?: IRequestOptions ): Observable<IResponse> {
-    return this.http
-      .put<IResponse>(`${environment.api.endpoint}${path}`, JSON.stringify(params), options)
-      .pipe(catchError(this.formatErrors));
+  public async Get2(path: string, options?: IRequestOptions) {
+    return await this.http
+      .get<IResponse>(`${environment.api.endpoint}${path}`, options)
+      .toPromise();
   }
 
-  public Post( path: string, params: Object = {}, options?: IRequestOptions ): Observable<IResponse> {
-    return this.http
-      .post<IResponse>(`${environment.api.endpoint}${path}`, JSON.stringify(params), options)
-      .pipe(catchError(this.formatErrors));
+  public async Put(
+    path: string,
+    params: Object = {},
+    options?: IRequestOptions
+  ) {
+    return await this.http
+      .put<IResponse>(
+        `${environment.api.endpoint}${path}`,
+        JSON.stringify(params),
+        options
+      )
+      .pipe(catchError(this.formatErrors))
+      .toPromise();
   }
 
-  public Delete( path: string, options?: IRequestOptions ): Observable<IResponse> {
-    return this.http
+  public async Post(
+    path: string,
+    params: Object = {},
+    options?: IRequestOptions
+  ) {
+    return await this.http
+      .post<IResponse>(
+        `${environment.api.endpoint}${path}`,
+        JSON.stringify(params),
+        options
+      )
+      .pipe(catchError(this.formatErrors))
+      .toPromise();
+  }
+
+  public async Delete(path: string, options?: IRequestOptions) {
+    return await this.http
       .delete<IResponse>(`${environment.api.endpoint}${path}`, options)
-      .pipe(catchError(this.formatErrors));
+      .pipe(catchError(this.formatErrors))
+      .toPromise();
   }
 }

@@ -2,35 +2,16 @@ import { Injectable } from '@angular/core';
 import {
   HttpInterceptor,
   HttpRequest,
-  HttpResponse,
   HttpHandler,
-  HttpEvent,
-  HttpErrorResponse
+  HttpEvent
 } from '@angular/common/http';
-import 'rxjs/add/observable/fromPromise';
-
-import { JwtService } from '../services/jwt/jwt.service';
-import { Observable, throwError } from 'rxjs';
-import { map, catchError } from 'rxjs/operators';
+import { Observable } from 'rxjs';
 
 @Injectable()
 export class CustomHttpInterceptor implements HttpInterceptor {
-  constructor() {
-    console.log('CustomHttpInterceptor Interceptor init...');
-  }
+  constructor() {}
 
-  intercept(
-    request: HttpRequest<any>,
-    next: HttpHandler
-  ): Observable<HttpEvent<any>> {
-    const token: string = localStorage.getItem('token');
-
-    if (token) {
-      request = request.clone({
-        headers: request.headers.set('Authorization', 'Bearer ' + token)
-      });
-    }
-
+  intercept( request: HttpRequest<any>, next: HttpHandler ): Observable<HttpEvent<any>> {
     if (!request.headers.has('Content-Type')) {
       request = request.clone({
         headers: request.headers.set(
@@ -44,13 +25,6 @@ export class CustomHttpInterceptor implements HttpInterceptor {
       headers: request.headers.set('Accept', 'application/json')
     });
 
-    return next.handle(request).pipe(
-      map((event: HttpEvent<any>) => {
-        // if (event instanceof HttpResponse) {
-        //   // console.log('event--->>>', event);
-        // }
-        return event;
-      })
-    );
+    return next.handle(request);
   }
 }

@@ -1,5 +1,13 @@
 <header class="row">
-  <div class="col-12">
-    <h1 class="display-1">MARS Frontend</h1>
-  </div>
+    <div class="col-12">
+        <h1 class="display-1">MARS Frontend</h1>
+    </div>
 </header>
+
+<!-- nav -->
+<nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
+    <div class="navbar-nav">
+        <a class="nav-item nav-link" routerLink="/">Home</a>
+        <a class="nav-item nav-link" (click)="logout()">Logout</a>
+    </div>
+</nav>

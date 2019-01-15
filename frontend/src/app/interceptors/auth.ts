@@ -10,19 +10,18 @@ import { JwtService } from '../services/jwt/jwt.service';
 
 @Injectable()
 export class AuthInterceptor implements HttpInterceptor {
-  public constructor(private jwt: JwtService) {
-    console.log('Auth Interceptor init...');
-  }
 
-  public intercept( req: HttpRequest<any>, next: HttpHandler ): Observable<HttpEvent<any>> {
-    let clonedRequest: HttpRequest<any>;
+  constructor(private jwt: JwtService) {}
+
+  public intercept( request: HttpRequest<any>, next: HttpHandler ): Observable<HttpEvent<any>> {
     const token = this.jwt.getToken();
+
     if (token) {
-      clonedRequest = req.clone({
-        headers: req.headers.set('Authentication', token)
+      request = request.clone({
+        headers: request.headers.set('Authorization', `Bearer ${token}`)
       });
     }
 
-    return next.handle(clonedRequest);
+    return next.handle(request);
   }
 }

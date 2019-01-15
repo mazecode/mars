@@ -1,10 +1,6 @@
-import { NgModule, Injector } from '@angular/core';
-import {
-  HTTP_INTERCEPTORS,
-  HttpClient,
-  HttpClientModule
-} from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { NgModule } from '@angular/core';
+import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
 
@@ -20,14 +16,13 @@ import { UsersComponent } from './components/users/users.component';
 import { ApiService } from './services/api/api.service';
 import { UserService } from './services/user/user.service';
 import { AuthInterceptor } from './interceptors/auth';
-import { HeadersInterceptor } from './interceptors/headers';
-import { ServerLocationInterceptor } from './interceptors/server';
 import { CustomHttpInterceptor } from './interceptors/http';
 import { LoginComponent } from './components/login/login.component';
+import { AuthGuard } from './guards/auth.guard';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
-  { path: 'home', component: HomeComponent },
+  { path: 'home', component: HomeComponent, canActivate: [AuthGuard] },
   { path: 'users/:id', component: UsersComponent },
   { path: '404', component: Page404Component },
   { path: '**', redirectTo: '404', pathMatch: 'full' }
@@ -46,6 +41,7 @@ const routes: Routes = [
   imports: [
     BrowserModule,
     HttpClientModule,
+    ReactiveFormsModule,
     FormsModule,
     RouterModule.forRoot(routes, { useHash: true }),
     LoggerModule.forRoot({
@@ -55,31 +51,17 @@ const routes: Routes = [
     })
   ],
   providers: [
+    // Servicios
     ApiService,
     UserService,
-    { provide: HTTP_INTERCEPTORS, useClass: CustomHttpInterceptor, multi: true }
+    // Interceptores
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: CustomHttpInterceptor,
+      multi: true
+    }
   ],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
-
-// {
-//   provide: HTTP_INTERCEPTORS,
-//   useClass: AuthInterceptor,
-//   multi: true,
-// },
-// {
-//   provide: HTTP_INTERCEPTORS,
-//   useClass: HeadersInterceptor,
-//   multi: true
-// },
-// {
-//   provide: HTTP_INTERCEPTORS,
-//   useClass: ServerLocationInterceptor,
-//   multi: true
-// },
-// {
-//   provide: HTTP_INTERCEPTORS,
-//   useClass: CustomHttpInterceptor,
-//   multi: true
-// }

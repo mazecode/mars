@@ -9,37 +9,26 @@ import { ApiService } from '../api/api.service';
 export class UserService {
   users: any[] = [];
 
-  constructor(private service: ApiService) {
-    console.log('User Service init...');
+  constructor(private service: ApiService) {}
+
+  public async all() {
+    return await this.service.Get(`/users`);
   }
 
-  login() {
+  public async get(id: number) {
+    return await this.service.Get(`/users/${id}`);
+  }
+
+  public async update(id: number) {
     const data = {
       username: 'dummys',
       name: 'Dummy API',
       surnames: 'Foo loop'
     };
-    return this.service.Post('/login', data);
+    return await this.service.Put(`/users/${id}`, data);
   }
 
-  all() {
-    return this.service.Get(`/users`);
-  }
-
-  get(id: number) {
-    return this.service.Get(`/users/${id}`);
-  }
-
-  update(id: number) {
-    const data = {
-      username: 'dummys',
-      name: 'Dummy API',
-      surnames: 'Foo loop'
-    };
-    return this.service.Put(`/users/${id}`, data);
-  }
-
-  delete(id: number) {
-    return this.service.Delete(`/users/${id}`);
+  public async delete(id: number) {
+    return await this.service.Delete(`/users/${id}`);
   }
 }

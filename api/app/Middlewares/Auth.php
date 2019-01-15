@@ -16,16 +16,19 @@ class Auth
         if (!isset($authHeader) || sizeof($authHeader) == 0) {
             return $response->setError(true)->addMessage('401 Unauthorized')->addMessage('Header Unauthorized')->withJson([], 401);
         }
-
+        
         try {
-            $authHeaderDecoded = JWT::decode($authHeader[0], getenv('SECRET_KEY'), array('HS256'));
+            list($jwt) = sscanf($authHeader[0], 'Bearer %s');
+
+            $authHeaderDecoded = JWT::decode($jwt, getenv('SECRET_KEY'), array('HS256'));
+            
             $response = $next($request, $response);
         } catch (SignatureInvalidException $e) {
             // Suplantacion
             return $response->setError(true)->addMessage('Intento de suplantación detectado. Su IP ha sido guardada.');
         } catch (UnexpectedValueException $e) {
             // 401 Unauthorized - Expired
-            return $response->setError(true)->addMessage('401 Unauthorized - Token expirado' . $authHeader[0]);
+            return $response->setError(true)->addMessage('401 Unauthorized - Token expirado');
         } catch (\Exception $e) {
             // 401 Unauthorized
             return $response->setError(true)
