@@ -1,15 +1,16 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 import { UserService } from '../../services/user/user.service';
 import { JwtService } from '../../services/jwt/jwt.service';
+
 import { IUser } from '../../interfaces/IUser';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss'],
-  providers: [UserService]
+  // providers: [SessionService]
 })
 export class HomeComponent implements OnInit {
   users: Array<IUser> = [];

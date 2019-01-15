@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { IUser } from '../../interfaces/IUser';
 
 @Injectable({
   providedIn: 'root'
@@ -8,7 +9,7 @@ export class SessionService {
 
   constructor() {}
 
-  getCurrentUser(): string {
+  getCurrentUser(): IUser {
     return (this.currentUser = window.localStorage['currentUser']);
   }
 

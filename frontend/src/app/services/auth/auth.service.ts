@@ -44,4 +44,8 @@ export class AuthService {
 
     return false;
   }
+
+  public getCurrentUser(): IUser {
+    return this.session.getCurrentUser();
+  }
 }
