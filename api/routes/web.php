@@ -7,5 +7,7 @@ use Slim\Http\Response;
 $app->get('/[{name}]', function (Request $request, Response $response, array $args) {
     $this->logger->info("Slim-Skeleton '/' route");
 
+    d((new App\Models\Descuento())->fake());
+
     return $this->renderer->render($response, 'index.phtml', $args);
 });

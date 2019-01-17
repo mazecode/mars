@@ -1,24 +1,33 @@
-import { NgModule } from '@angular/core';
+import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule, Routes } from '@angular/router';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+
+import { environment } from 'src/environments/environment';
+import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { Page404Component } from './components/page404/page404.component';
-
-import { LoggerModule, NgxLoggerLevel } from 'ngx-logger';
-import { environment } from 'src/environments/environment';
+import { NotificationComponent } from './components/notification/notification.component';
 import { UsersComponent } from './components/users/users.component';
+import { LoginComponent } from './components/login/login.component';
+
 import { ApiService } from './services/api/api.service';
 import { UserService } from './services/user/user.service';
+import { NotificationService } from './services/notification/notification.service';
+
 import { AuthInterceptor } from './interceptors/auth';
 import { CustomHttpInterceptor } from './interceptors/http';
-import { LoginComponent } from './components/login/login.component';
+
 import { AuthGuard } from './guards/auth.guard';
+import { ErrorHandler } from './services/error/ErrorHandler';
+import { MaterialModules } from './MaterialModules';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -34,6 +43,7 @@ const routes: Routes = [
     HeaderComponent,
     FooterComponent,
     Page404Component,
+    NotificationComponent,
     HomeComponent,
     UsersComponent,
     LoginComponent
@@ -45,15 +55,24 @@ const routes: Routes = [
     FormsModule,
     RouterModule.forRoot(routes, { useHash: true }),
     LoggerModule.forRoot({
-      serverLoggingUrl: `${environment.api.endpoint}/logs`,
+      // serverLoggingUrl: `${environment.api.endpoint}/logs`,
       level: NgxLoggerLevel.ERROR,
       serverLogLevel: NgxLoggerLevel.ERROR
-    })
+    }),
+    // Material Modules
+    BrowserModule,
+    BrowserAnimationsModule,
+    MaterialModules
+  ],
+  exports: [
+    MaterialModules
   ],
   providers: [
+    ErrorHandler,
     // Servicios
     ApiService,
     UserService,
+    NotificationService,
     // Interceptores
     { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true },
     {
@@ -62,6 +81,7 @@ const routes: Routes = [
       multi: true
     }
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  schemas: [CUSTOM_ELEMENTS_SCHEMA]
 })
 export class AppModule {}

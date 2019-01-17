@@ -1,17 +1,14 @@
-<div *ngIf="currentUser">
-    <header class="row bg-dark text-light p-1">
-        <div class="col-12">
-            <h3>Configurador</h3>
-        </div>
-    </header>
+<app-notification></app-notification>
+<!-- <button class="btn btn-success" (click)="success('Success!!')">Success</button> -->
 
-    <!-- nav -->
-    <div class="sticky-top">
-        <nav class="navbar navbar-expand navbar-dark bg-dark" *ngIf="currentUser">
-            <div class="navbar-nav">
-                <a class="nav-item nav-link" routerLink="/">Home</a>
-                <a class="nav-item nav-link" (click)="logout()">Logout</a>
-            </div>
-        </nav>
-    </div>
-</div>
+<!--The content below is only a placeholder and can be replaced.-->
+<mat-toolbar color="primary" *ngIf="currentUser">
+    <mat-toolbar-row>
+        <!--  <span>HOME</span> -->
+        <span><a routerLink="/">HOME</a></span>
+        <span class="spacer"></span>
+        <a mat-button routerLink="/register">Register</a>
+        <a mat-button routerLink="/login">Login</a>
+        <a mat-button (click)="logout()">Logout</a>
+    </mat-toolbar-row>
+</mat-toolbar>

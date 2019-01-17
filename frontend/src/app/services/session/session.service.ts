@@ -5,7 +5,7 @@ import { IUser } from '../../interfaces/IUser';
   providedIn: 'root'
 })
 export class SessionService {
-  currentUser = '';
+  currentUser: IUser = null;
 
   constructor() {}
 
@@ -13,7 +13,7 @@ export class SessionService {
     return (this.currentUser = window.localStorage['currentUser']);
   }
 
-  saveCurrentUser(currentUser: string): void {
+  saveCurrentUser(currentUser: IUser): void {
     this.currentUser = currentUser;
     window.localStorage['currentUser'] = currentUser;
   }

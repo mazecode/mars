@@ -5,9 +5,9 @@ use Psr\Http\Message\ResponseInterface as Response;
 
 use Firebase\JWT\JWT;
 
-use App\Models\Auth\User as ToolUser;
+use App\Models\Descuento;
 
-class LoginController extends BaseController
+class DescuentoController extends BaseController
 {
 
     public function login(Request $request, Response $response, array $args)

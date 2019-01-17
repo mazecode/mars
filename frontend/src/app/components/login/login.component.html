@@ -1,44 +1,34 @@
-<section class="row">
-    <div class="col-4">
-        <div class="card card-login mx-auto mt-5">
-            <div class="card-header">Login</div>
-            <div class="card-body">
-                <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-                    <div class="form-group">
-                        <div class="form-label-group">
-                            <input type="text" formControlName="username" class="form-control" placeholder="Username" [ngClass]="{ 'is-invalid': submitted && f.username.errors }" required="required" autofocus="autofocus">
-                            <label for="inputEmail">Username</label>
-                        </div>
-                        <div *ngIf="submitted && f.username.errors" class="invalid-feedback">
-                            <div *ngIf="f.username.errors.required">Username is required</div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="form-label-group">
-                            <input type="password" formControlName="password" class="form-control" placeholder="Password" [ngClass]="{ 'is-invalid': submitted && f.password.errors }" required="required">
-                            <label for="inputPassword">Password</label>
-                        </div>
-                        <div *ngIf="submitted && f.password.errors" class="invalid-feedback">
-                            <div *ngIf="f.password.errors.required">Password is required</div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <div class="checkbox">
-                            <label>
-                <input type="checkbox" value="remember-me">
-                Remember Password
-              </label>
-                        </div>
-                    </div>
-                    <div *ngIf="error" class="alert alert-danger">{{error}}</div>
-                    <button type="submit" class="btn btn-primary btn-block">Login</button>
-                    <img *ngIf="loading" class="pl-2" src="data:image/gif;base64,R0lGODlhEAAQAPIAAP///wAAAMLCwkJCQgAAAGJiYoKCgpKSkiH/C05FVFNDQVBFMi4wAwEAAAAh/hpDcmVhdGVkIHdpdGggYWpheGxvYWQuaW5mbwAh+QQJCgAAACwAAAAAEAAQAAADMwi63P4wyklrE2MIOggZnAdOmGYJRbExwroUmcG2LmDEwnHQLVsYOd2mBzkYDAdKa+dIAAAh+QQJCgAAACwAAAAAEAAQAAADNAi63P5OjCEgG4QMu7DmikRxQlFUYDEZIGBMRVsaqHwctXXf7WEYB4Ag1xjihkMZsiUkKhIAIfkECQoAAAAsAAAAABAAEAAAAzYIujIjK8pByJDMlFYvBoVjHA70GU7xSUJhmKtwHPAKzLO9HMaoKwJZ7Rf8AYPDDzKpZBqfvwQAIfkECQoAAAAsAAAAABAAEAAAAzMIumIlK8oyhpHsnFZfhYumCYUhDAQxRIdhHBGqRoKw0R8DYlJd8z0fMDgsGo/IpHI5TAAAIfkECQoAAAAsAAAAABAAEAAAAzIIunInK0rnZBTwGPNMgQwmdsNgXGJUlIWEuR5oWUIpz8pAEAMe6TwfwyYsGo/IpFKSAAAh+QQJCgAAACwAAAAAEAAQAAADMwi6IMKQORfjdOe82p4wGccc4CEuQradylesojEMBgsUc2G7sDX3lQGBMLAJibufbSlKAAAh+QQJCgAAACwAAAAAEAAQAAADMgi63P7wCRHZnFVdmgHu2nFwlWCI3WGc3TSWhUFGxTAUkGCbtgENBMJAEJsxgMLWzpEAACH5BAkKAAAALAAAAAAQABAAAAMyCLrc/jDKSatlQtScKdceCAjDII7HcQ4EMTCpyrCuUBjCYRgHVtqlAiB1YhiCnlsRkAAAOwAAAAAAAAAAAA==">
+<mat-grid-list cols="4" rowHeight="450px">
+    <mat-grid-tile [colspan]="4" [rowspan]="1">
+        <mat-card class="example-card">
+            <mat-card-header>
+                <mat-card-title>Inicio Sesión</mat-card-title>
+            </mat-card-header>
+            <mat-card-content>
+                <form class="example-form">
+                    <table class="example-full-width" cellspacing="0">
+                        <tr>
+                            <td>
+                                <mat-form-field class="example-full-width">
+                                    <input type="text" matInput placeholder="Username" [(ngModel)]="username" name="username" required autofocus="autofocus">
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <mat-form-field class="example-full-width">
+                                    <input matInput placeholder="Password" [(ngModel)]="password" type="password" name="password" required>
+                                </mat-form-field>
+                            </td>
+                        </tr>
+                    </table>
                 </form>
-                <div class="text-center">
-                    <a class="d-block small mt-3" href="register.html">Register an Account</a>
-                    <a class="d-block small" href="forgot-password.html">Forgot Password?</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+                <mat-spinner [style.display]="showSpinner ? 'block' : 'none'"></mat-spinner>
+            </mat-card-content>
+
+            <mat-card-actions>
+                <button mat-raised-button (click)="login()" color="primary">Login</button>
+            </mat-card-actions>
+        </mat-card>
+    </mat-grid-tile>
+</mat-grid-list>

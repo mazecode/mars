@@ -3,7 +3,7 @@
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
-use App\Models\ToolUser;
+use App\Models\Auth\User as ToolUser;
 
 class UserController extends BaseController
 {

@@ -1,13 +1,18 @@
 <?php
 
 
-use Phinx\Migration\AbstractMigration;
+use Illuminate\Database\Capsule\Manager as Capsule;
+use Phpmig\Migration\Migration;
 
-class CreatePermissionTable extends AbstractMigration
+class CreatePermissionTable extends Migration
 {
+    $container = $this->getContainer(); 
+    
     public function up()
     {
-        $this->schema->create('permissions', function(Illuminate\Database\Schema\Blueprint $table){
+
+        $container->schema->dropIfExists('permissions');
+        $container->schema->create('permissions', function(Illuminate\Database\Schema\Blueprint $table){
             $table->engine = 'InnoDB';	
             $table->charset = 'utf8';
             $table->collation = 'utf8_unicode_ci';	
@@ -24,6 +29,6 @@ class CreatePermissionTable extends AbstractMigration
 
     public function down()
     {
-        $this->dropTable('permissions');
+        $container->schema->dropTable('permissions');
     }
 }

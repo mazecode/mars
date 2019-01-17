@@ -1,9 +1,8 @@
 <?php
 
+use Phpmig\Migration\Migration;
 
-use Phinx\Migration\AbstractMigration;
-
-class CreateGroupPermissionTable extends AbstractMigration
+class CreateGroupPermissionTable extends Migration
 {
     public function up()
     {
@@ -19,8 +18,8 @@ class CreateGroupPermissionTable extends AbstractMigration
         });
     }
 
-    public function down()
-    {
-        $this->dropTable('group_permissions');
-    }
+    // public function down()
+    // {
+    //     $this->dropTable('group_permissions');
+    // }
 }

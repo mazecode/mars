@@ -17,18 +17,7 @@ import { IRequestOptions } from 'src/app/interfaces/IRequestOptions';
 export class ApiService {
   constructor(private http: HttpClient) {}
 
-  private formatErrors(error: any) {
-    return throwError(error.error);
-  }
-
   public async Get(path: string, options?: IRequestOptions) {
-    return this.http
-      .get<IResponse>(`${environment.api.endpoint}${path}`, options)
-      .pipe(catchError(this.formatErrors))
-      .toPromise();
-  }
-
-  public async Get2(path: string, options?: IRequestOptions) {
     return await this.http
       .get<IResponse>(`${environment.api.endpoint}${path}`, options)
       .toPromise();
@@ -45,7 +34,6 @@ export class ApiService {
         JSON.stringify(params),
         options
       )
-      .pipe(catchError(this.formatErrors))
       .toPromise();
   }
 
@@ -60,14 +48,12 @@ export class ApiService {
         JSON.stringify(params),
         options
       )
-      .pipe(catchError(this.formatErrors))
       .toPromise();
   }
 
   public async Delete(path: string, options?: IRequestOptions) {
     return await this.http
       .delete<IResponse>(`${environment.api.endpoint}${path}`, options)
-      .pipe(catchError(this.formatErrors))
       .toPromise();
   }
 }
