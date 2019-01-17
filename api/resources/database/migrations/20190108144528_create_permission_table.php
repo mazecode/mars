@@ -6,16 +6,16 @@ use Phpmig\Migration\Migration;
 
 class CreatePermissionTable extends Migration
 {
-    $container = $this->getContainer(); 
-    
+
     public function up()
     {
+        $container = $this->getContainer();
 
         $container->schema->dropIfExists('permissions');
-        $container->schema->create('permissions', function(Illuminate\Database\Schema\Blueprint $table){
-            $table->engine = 'InnoDB';	
+        $container->schema->create('permissions', function (Illuminate\Database\Schema\Blueprint $table) {
+            $table->engine = 'InnoDB';
             $table->charset = 'utf8';
-            $table->collation = 'utf8_unicode_ci';	
+            $table->collation = 'utf8_unicode_ci';
 
             $table->increments('id');
             $table->string('name')->comment('Permission\'s name');
