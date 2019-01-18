@@ -1,7 +1,9 @@
 <?php
 namespace App\Models\Auth;
  
-class UserPermission extends App\Models\Base
+class UserPermission extends \App\Models\Base
 {
 	protected $table = 'users_permission';
+	protected $hidden = ['id'];
+    protected $fillable = [];
 }

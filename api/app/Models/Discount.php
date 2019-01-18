@@ -1,30 +1,10 @@
 <?php namespace App\Models;
 
-class Descuento extends Base
+class Discount extends Base
 {
-
     protected $table = 'descuentos';
-
-    function __construct()
-    {
-        $fake = [
-            [
-                'id' => 1,
-                'cod_desc' => '',
-                'cuotas' => 12,
-                'descuento' => '',
-                'tipo' => '',
-                'nombre_dto' => '',
-                'producto' => '',
-                'aplica_en' => '',
-                'codigo_generado' => '',
-                'activo' => true,
-                'segmento' => ''
-            ],
-            []
-        ];
-        return json_encode($fake);
-    }
+    protected $hidden = ['id'];
+    protected $fillable = [];
 
     public static function fake()
     {

@@ -1,6 +1,6 @@
 <?php namespace App\Models\Auth;
 
-class User extends App\Models\Base
+class User extends \App\Models\Base
 {
     protected $table = 'tool_users';
     protected $hidden = [

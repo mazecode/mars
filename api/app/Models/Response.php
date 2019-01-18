@@ -1,5 +1,8 @@
 <?php namespace App\Models;
 
+use Symfony\Component\Config\Definition\Exception\Exception;
+
+
 class Response extends \Slim\Http\Response
 {
 	private $format;
@@ -95,12 +98,12 @@ class Response extends \Slim\Http\Response
 		return $this;
 	}
 
-	/**
-	 * Add some messages
-	 * @message Array or string of message to incorporate
-	 */
-	function addMessage(string $message)
+	function addMessage($message)
 	{
+		if (!is_array($message) && !is_string($message)) {
+			return $this->setError(true)->addMessage('Message must be an array or string')->withJson([], 500);
+		}
+
 		if (is_string($message)) {
 			$message = [$message];
 		}
@@ -128,12 +131,12 @@ class Response extends \Slim\Http\Response
 
 	public function withJson($data, $status = null, $encodingOptions = 0)
 	{
-		if(!isset($status)) {
+		if (!isset($status)) {
 			$status = 200;
 		}
 		$response = $this->withBody(new \Slim\Http\Body(fopen('php://temp', 'r+')))->withStatus($status);
 		$response = $response->setData($data)->setStatusCode($status)->setStatusText($response->getReasonPhrase());
-		
+
 		if ($response->getFormat() === 'json') {
 			$response->body->write($json = json_encode($response->getDataPacket(), $encodingOptions | JSON_PRETTY_PRINT));
 
@@ -146,13 +149,4 @@ class Response extends \Slim\Http\Response
 
 		return $response;
 	}
-
-	public function to_json() {
-        return json_encode(array(
-            'something' => $this->something,
-            'protected_something' => $this->get_protected_something(),
-            'private_something' => $this->get_private_something()                
-        ));
-    }
-
 }

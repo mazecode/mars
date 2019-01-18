@@ -3,21 +3,19 @@
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
-use App\Models\Auth\User as ToolUser;
+use App\Models\Auth\User;
 
 class UserController extends BaseController
 {
 
     public function index(Request $request, Response $response, array $args)
     {
-        $this->container->logger->info("Users index");
+        $this->container->logger->info('Users All');
+
         try {
-            return $response->withJson(ToolUser::all(), 200);
+            return $response->withJson(User::all());
         } catch (\Exception $e) {
-            return $response->setError(true)
-                ->addMessage('Error while updating user')
-                ->addMessage(getenv('APP_DEBUG') ? $e->getMessage() : '')
-                ->withJson([], 502);
+            return $this->handleError([$this->trans('errors.user.notfound')], 502, $e);
         }
     }
 
@@ -26,19 +24,15 @@ class UserController extends BaseController
         $this->container->logger->info("User getting {$request->getAttribute('id')}");
 
         try {
-            return $response->withJson(ToolUser::findOrFail((int)$request->getAttribute('id')), 200);
+            return $response->withJson(User::findOrFail((int)$request->getAttribute('id')));
         } catch (\Exception $e) {
-            return $response->setError(true)
-                ->addMessage('User not found')
-                ->addMessage(getenv('APP_DEBUG') ? $e->getMessage() : '')
-                ->withJson([], 204);
+            return $this->handleError(["User {$request->getAttribute('id')} not found"], 502, $e);
         }
     }
 
     public function create(Request $request, Response $response, array $args)
     {
-
-        $this->container->logger->info("User create");
+        $this->container->logger->info('User create');
 
         try {
             // TODO: Validate at least username field
@@ -46,7 +40,7 @@ class UserController extends BaseController
                 return $response->setError(true)->addMessage('Field Username is required')->withJson([], 500);
             }
 
-            $user = new ToolUser();
+            $user = new User();
 
             $user->name = $request->getParam('name');
             $user->surnames = $request->getParam('surnames');
@@ -67,19 +61,16 @@ class UserController extends BaseController
 
             return $response->addMessage('User created successfuly')->addMessage('Password: ' . $password)->withJson($user, 201);
         } catch (\Exception $e) {
-            return $response->setError(true)
-                ->addMessage('Error while creating user')
-                ->addMessage(getenv('APP_DEBUG') ? $e->getMessage() : '')
-                ->withJson([], 502);
+            return $this->handleError(['Error creating user'], 502, $e);
         }
     }
 
     public function update(Request $request, Response $response, array $args)
     {
-        $this->container->logger->info("User update");
+        $this->container->logger->info('User update');
 
         try {
-            $user = ToolUser::findOrFail((int)$request->getParam('id'));
+            $user = User::findOrFail((int)$request->getParam('id'));
 
             $user->name = $request->getParam('name');
             $user->surnames = $request->getParam('surnames');
@@ -97,28 +88,22 @@ class UserController extends BaseController
 
             $user->save();
 
-            return $response->addMessage('User updated successfuly')->withJson($user, 200);
+            return $response->addMessage('User updated successfuly')->withJson($user);
         } catch (\Exception $e) {
-            return $response->setError(true)
-                ->addMessage('Error while updating user')
-                ->addMessage(getenv('APP_DEBUG') ? $e->getMessage() : '')
-                ->withJson([], 502);
+            return $this->handleError(['Error updating user'], 502, $e);
         }
     }
 
     public function delete(Request $request, Response $response, array $args)
     {
-        $this->container->logger->info("User delete");
+        $this->container->logger->info(" User delete ");
 
         try {
-            ToolUser::destroy((int)$request->getAttribute('id'));
+            User::destroy((int)$request->getAttribute('id'));
 
             return $response->addMessage('User deleted successfuly')->withJson([], 202);
         } catch (\Exception $e) {
-            return $response->setError(true)
-                ->addMessage('Error while updating user')
-                ->addMessage(getenv('APP_DEBUG') ? $e->getMessage() : '')
-                ->withJson([], 502);
+            return $this->handleError(['Error deleting user'], 502, $e);
         }
     }
 }

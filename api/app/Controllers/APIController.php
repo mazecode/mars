@@ -3,7 +3,7 @@
 use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
-use App\Models\Auth\User as ToolUser;
+use App\Models\Auth\User;
 
 class APIController extends BaseController
 {
@@ -11,8 +11,6 @@ class APIController extends BaseController
     {
         $this->container->logger->info("API index");
 
-        $users = ToolUser::all();
-
-        return $response->withJson($users);
+        return $response->withJson(User::all());
     }
 }

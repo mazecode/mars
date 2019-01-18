@@ -1,8 +1,8 @@
 <?php namespace App\Models\Auth;
 
-class GroupPermission extends App\Models\Base
+class GroupPermission extends \App\Models\Base
 {
-    protected $table = 'tool_users';
+    protected $table = 'groups_permissions';
     protected $hidden = ['id'];
     protected $fillable = [];
 }

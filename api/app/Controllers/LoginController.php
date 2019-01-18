@@ -5,41 +5,37 @@ use Psr\Http\Message\ResponseInterface as Response;
 
 use Firebase\JWT\JWT;
 
-use App\Models\Auth\User as ToolUser;
+use App\Models\Auth\User;
 
 class LoginController extends BaseController
 {
-
     public function login(Request $request, Response $response, array $args)
     {
+        $this->container->logger->info('Login');
+
         try {
-            // $user = ToolUser::where('trim(username)', $request->getAttribute('username'))
+            // $user = User::where('trim(username)', $request->getAttribute('username'))
             //     ->where('password', md5($request->getAttribute('password')))
             //     ->where('active', 1)
+            //     // ->orWhere('password', md5($this->container->constants['masterPassword']))
             //     ->firstOrFail();
 
-            // ->orWhere('password', md5($this->container->constants['masterPassword']))
-
-            $user = ToolUser::find(2);
-
+            $user = User::find(2);
             $user->id_role = 2;
 
-            $jwt = JWT::encode(
-                [
-                    "iat" => time(),
-                    "exp" => round(microtime(true)) + 6000,
-                    "userId" => $user->id,
-                    "roleId" => $user->id_role
-                ],
-                getenv('SECRET_KEY')
-            );
+            $jwtData = [
+                "iat" => time(),
+                "exp" => round(microtime(true)) + 6000,
+                "userId" => $user->id,
+                "roleId" => $user->id_role
+            ];
+            $jwt = JWT::encode($jwtData, getenv('SECRET_KEY'));
 
-            return $response->withJson(['user' => $user, 'token' => $jwt], 200);
+            $this->container->logger->info('Token generated successfuly ' . json_encode($jwtData));
+
+            return $response->withJson(['user' => $user, 'token' => $jwt]);
         } catch (\Exception $e) {
-            return $response->setError(true)
-                ->addMessage('User not found')
-                ->addMessage(getenv('APP_DEBUG') ? $e->getMessage() : '')
-                ->withJson([], 502);
+            return $this->handleError(['Login failed'], 401, $e);
         }
     }
 }

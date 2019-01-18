@@ -1,13 +1,13 @@
 <?php namespace App\Models;
 
-class Tarifa extends Base
+class Rate extends Base
 {
     protected $table = 'tarifas';
+    protected $hidden = ['id'];
+    protected $fillable = [];
 
-    function __construct() {
-    }
-
-    public static function fake() {
+    public static function fake()
+    {
         return json_decode('[
             {
                 "SEGMT_XLS" : ":porta.parti:porta.en_fi_post:porta.en_mo_post:sac.planes:bajas.parti.n1:bajas.parti.n2:kos.parti",

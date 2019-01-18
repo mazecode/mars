@@ -18,6 +18,6 @@ class Roles
             $response->getBody()->write($this->settings['errors']['403']['title']);
         }
         
-        return $response;F
+        return $response;
     }
 }
