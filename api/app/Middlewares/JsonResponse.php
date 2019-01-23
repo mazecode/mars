@@ -5,6 +5,17 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 
 class JsonResponse
 {
+    private $limit;
+    private $remaining;
+    private $reste;
+
+    public function __construct(int $limit = 30, int $remaining = 11, int $reset = 44)
+    {
+        $this->limit = $limit;
+        $this->remaining = $remaining;
+        $this->reset = $reset;
+    }
+
     public function __invoke(Request $request, Response $response, $next)
     {
         $response = $next($request, $response);
@@ -16,9 +27,9 @@ class JsonResponse
         $response = $this->validateHeaders($request, $response);
 
         return $response
-            ->withHeader('X-RateLimit-Limit', 30) // How many requests the user is allowed to make in an hour.
-            ->withHeader('X-RateLimit-Remaining', 11) // How many requests the user can make in the remaning time (before they exceed their rate limit).
-            ->withHeader('X-RateLimit-Reset', 44) // The time at which the rate limit will be reset (when they enter a new time period).
+            ->withHeader('X-RateLimit-Limit', $this->limit) // How many requests the user is allowed to make in an hour.
+            ->withHeader('X-RateLimit-Remaining', $this->remaining) // How many requests the user can make in the remaning time (before they exceed their rate limit).
+            ->withHeader('X-RateLimit-Reset', $this->reset) // The time at which the rate limit will be reset (when they enter a new time period).
             ->withHeader('X-Powered-By', 'Vodafone');
     }
 

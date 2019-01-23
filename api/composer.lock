@@ -152,7 +152,7 @@
         },
         {
             "name": "illuminate/container",
-            "version": "v5.7.21",
+            "version": "v5.7.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/container.git",
@@ -197,7 +197,7 @@
         },
         {
             "name": "illuminate/contracts",
-            "version": "v5.7.21",
+            "version": "v5.7.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/contracts.git",
@@ -241,7 +241,7 @@
         },
         {
             "name": "illuminate/database",
-            "version": "v5.7.21",
+            "version": "v5.7.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/database.git",
@@ -300,7 +300,7 @@
         },
         {
             "name": "illuminate/filesystem",
-            "version": "v5.7.21",
+            "version": "v5.7.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/filesystem.git",
@@ -352,7 +352,7 @@
         },
         {
             "name": "illuminate/support",
-            "version": "v5.7.20",
+            "version": "v5.7.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/support.git",
@@ -411,7 +411,7 @@
         },
         {
             "name": "illuminate/translation",
-            "version": "v5.7.21",
+            "version": "v5.7.22",
             "source": {
                 "type": "git",
                 "url": "https://github.com/illuminate/translation.git",
@@ -1799,16 +1799,16 @@
         },
         {
             "name": "vlucas/phpdotenv",
-            "version": "v3.1.0",
+            "version": "v3.1.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/vlucas/phpdotenv.git",
-                "reference": "bf58b9c61ba37ef1deaa29fe5dbb30222c948541"
+                "reference": "13be13df7df1ba7bca099b16943a8ba025a38a02"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/bf58b9c61ba37ef1deaa29fe5dbb30222c948541",
-                "reference": "bf58b9c61ba37ef1deaa29fe5dbb30222c948541",
+                "url": "https://api.github.com/repos/vlucas/phpdotenv/zipball/13be13df7df1ba7bca099b16943a8ba025a38a02",
+                "reference": "13be13df7df1ba7bca099b16943a8ba025a38a02",
                 "shasum": ""
             },
             "require": {
@@ -1846,7 +1846,7 @@
                 "env",
                 "environment"
             ],
-            "time": "2019-01-04T23:43:30+00:00"
+            "time": "2019-01-23T18:32:42+00:00"
         }
     ],
     "packages-dev": [

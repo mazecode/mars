@@ -2,23 +2,33 @@
     "name": "vodafone/conf_saturn",
     "description": "Configurador de Ofertas/Descuentos",
     "type": "project",
-    "keywords": ["vodafone", "mars", "api", "microframework", "rest", "router", "psr7"],
+    "keywords": [
+        "vodafone",
+        "mars",
+        "api",
+        "microframework",
+        "rest",
+        "router",
+        "psr7"
+    ],
     "license": "MIT",
-    "authors": [{
-        "name": "Diego Feliú",
-        "email": "diego.feliud@gmail.com"
-    }],
+    "authors": [
+        {
+            "name": "Diego Feliú",
+            "email": "diego.feliud@gmail.com"
+        }
+    ],
     "require": {
         "php": ">=5.5.0",
         "slim/slim": "^3.6",
         "slim/php-view": "^2.0",
-        "monolog/monolog": "^1.17",
         "slim/http": "^0.5",
-        "illuminate/database": "~5.1",
-        "tuupola/cors-middleware": "^0.9.1",
+        "monolog/monolog": "^1.17",
         "vlucas/phpdotenv": "^3.0",
         "seld/jsonlint": "^1.7",
         "firebase/php-jwt": "^5.0",
+        "tuupola/cors-middleware": "^0.9.1",
+        "illuminate/database": "~5.1",
         "illuminate/filesystem": "^5.7",
         "illuminate/translation": "^5.3"
     },
@@ -44,10 +54,11 @@
         "psr/log-implementation": "1.0.0"
     },
     "scripts": {
-        "start": "php -S 0.0.0.0:8888 -t public public/index.php",
         "post-install-cmd": [
             "php -r \"file_exists('.env') || copy('.env.example', '.env');\""
         ],
-        "test": "phpunit"
+        "start": "php -S 0.0.0.0:8888 -t public public/index.php",
+        "test": "phpunit",
+        "refresh-database": "php vendor/bin/phinx rollback -t0; php vendor/bin/phinx migrate; php vendor/bin/phinx seed:run"
     }
 }

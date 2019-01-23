@@ -1,24 +1,22 @@
 <?php
 
-use Phpmig\Migration\Migration;
+use App\Migration\Migration;
 
 class CreateGroupTable extends Migration
 {
-    // public function up()
-    // {
-    //     $this->schema->create('groups', function(Illuminate\Database\Schema\Blueprint $table){
-    //         $table->engine = 'InnoDB';	
-    //         $table->charset = 'utf8';
-    //         $table->collation = 'utf8_unicode_ci';	
-
-    //         $table->increments('id');
-    //         $table->string('name')->comment('Group\'s name');
-    //         $table->timestamps();
-    //     });
-    // }
-
+    public function up()
+    {
+        $this->schema->create('widgets', function (Illuminate\Database\Schema\Blueprint $table) {
+            // Auto-increment id 
+            $table->increments('id');
+            $table->integer('serial_number');
+            $table->string('name');
+            // Required for Eloquent's created_at and updated_at columns 
+            $table->timestamps();
+        });
+    }
     public function down()
     {
-        $this->dropTable('groups');
+        $this->schema->drop('widgets');
     }
 }
