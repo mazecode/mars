@@ -6,10 +6,10 @@ import { catchError } from 'rxjs/operators';
 import { environment } from '../../../environments/environment';
 
 import { JwtService } from '../jwt/jwt.service';
+import { IRequestOptions } from 'src/app/Interfaces/IRequestOptions';
+import { IResponse } from 'src/app/Interfaces/IResponse';
 
 // Interfaz
-import { IResponse } from '../../interfaces/IResponse';
-import { IRequestOptions } from 'src/app/interfaces/IRequestOptions';
 
 @Injectable({
   providedIn: 'root'
