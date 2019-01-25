@@ -15,22 +15,22 @@
         "slim/http": "^0.5",
         "monolog/monolog": "^1.17",
         "vlucas/phpdotenv": "^3.0",
-        "seld/jsonlint": "^1.7",
         "firebase/php-jwt": "^5.0",
         "tuupola/cors-middleware": "^0.9.1",
         "tuupola/slim-jwt-auth": "^2.3",
         "illuminate/database": "^5.5",
         "illuminate/filesystem": "^5.7",
         "illuminate/translation": "^5.3",
-        "fzaninotto/faker": "^1.7",
+        "illuminate/console": "^5.7",
         "respect/validation": "^1.1",
-        "league/fractal": "^0.17.0",
-        "robmorgan/phinx": "dev-master#4c26aeb",
-        "illuminate/console": "^5.7"
+        "robmorgan/phinx": "dev-master#4c26aeb"
     },
     "require-dev": {
         "phpunit/phpunit": "^6.4",
+        "seld/jsonlint": "^1.7",
+        "fzaninotto/faker": "^1.7",
         "mazecode/dumpper": "^1.0"
+
     },
     "autoload": {
         "psr-4": {
@@ -64,7 +64,7 @@
             "composer dumpautoload -o"
         ],
         "start": "php -S 0.0.0.0:8888 -t public public/index.php",
-        "test": "vendor/bin/phpunit --colors=always --coverage-clover",
-        "refresh-database": "/vendor/bin/phinx rollback -t0; /vendor/bin/phinx migrate; /vendor/bin/phinx seed:run"
+        "test": "phpunit --colors=always --coverage-clover",
+        "refresh-database": "phinx rollback -t0 && phinx migrate && phinx seed:run"
     }
 }

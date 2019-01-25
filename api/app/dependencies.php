@@ -41,14 +41,6 @@ $container['validator'] = function ($c) {
     // return new Conduit\Validation\Validator();
 };
 
-// Fractal
-$container['fractal'] = function ($c) {
-    $manager = new \League\Fractal\Manager();
-    $manager->setSerializer(new \League\Fractal\Serializer\ArraySerializer());
-
-    return $manager;
-};
-
 // Jwt Middleware
 $container['jwt'] = function ($c) {
     $jws_settings = $c->get('settings')['jwt'];

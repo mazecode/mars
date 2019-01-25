@@ -39,3 +39,4 @@ class Auth
         return $response;
     }
 }
+// https://github.com/dupkey/slim3-api

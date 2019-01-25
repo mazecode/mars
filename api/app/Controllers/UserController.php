@@ -37,9 +37,15 @@ class UserController extends BaseController
         $this->container->logger->info('User create');
 
         try {
-            // TODO: Validate at least username field
-            if (empty((string)$request->getParam('username'))) {
-                return $response->setError(true)->addMessage('Field Username is required')->withJson([], 500);
+            $this->validator->validateArray(
+                $data = $request->getParam('username'),
+                [
+                    'username' => v::notEmpty()
+                ]
+            );
+
+            if ($this->validator->failed()) {
+                return $response->setError(true)->addMessage($this->validator->getErrors())->withJson([], 422);
             }
 
             $user = new User();

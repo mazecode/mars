@@ -2,7 +2,19 @@
 
 require_once './vendor/autoload.php';
 
-$settings = require './app/settings.php';
+defined('DS') ? : define('DS', DIRECTORY_SEPARATOR);
+defined('ROOT') ? : define('ROOT', dirname(__DIR__) . DS . 'api' . DS);
+
+if (file_exists(ROOT . '.env')) {
+    try {
+        $dotenv = Dotenv\Dotenv::create(ROOT);
+        $dotenv->load();
+    } catch (Dotenv\Exception\InvalidPathException $e) {
+        //
+    }
+}
+
+$settings = require ROOT . 'app/settings.php';
 
 $app = new \Slim\App($settings);
 $container = $app->getContainer();

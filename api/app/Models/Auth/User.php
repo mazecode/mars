@@ -2,7 +2,7 @@
 
 class User extends \App\Models\Base
 {
-    protected $table = 'tool_users';
+    protected $table = 'users';
     protected $hidden = [
         // 'id',
         'created_at',

@@ -3,16 +3,28 @@
 use Slim\Http\StatusCode;
 use Psr\Container\ContainerInterface;
 
+use Respect\Validation\Validator as v;
+
 use App\Models\Response;
 use Symfony\Component\Config\Definition\Exception\Exception;
 
 class BaseController
 {
 	protected $container;
+	/** @var \Conduit\Validation\Validator */
+	protected $validator;
+	/** @var \Conduit\Services\Auth\Auth */
+	protected $auth;
+	protected $translator;
 
 	public function __construct(ContainerInterface $container)
 	{
+		// https://www.sitepoint.com/php-fractal-make-your-apis-json-pretty-always/
 		$this->container = $container;
+		$this->logger = $container->get('logger');
+		// $this->auth = $container->get('auth');	
+		$this->validator = $container->get('validator');
+		$this->translator = $container->get('translator');
 	}
 
 	public function generatePassword(string $username) : string
@@ -30,7 +42,7 @@ class BaseController
 			$mesages = array('General Error');
 		}
 
-		$this->container->logger->error($exception->getMessage());
+		$this->logger->error($exception->getMessage());
 
 		return (new Response)->setError(true)
 			->addMessage($messages)
@@ -41,8 +53,8 @@ class BaseController
 
 	public function trans(string $message, array $params = []) : string
 	{
-		$message = $this->container->translator->trans($message);
-		
+		$message = $this->translator->trans($message);
+
 		if (!empty($params)) {
 			$message = @vsprintf($message, $params);
 		}
