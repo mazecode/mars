@@ -2,19 +2,20 @@
 
 require_once './vendor/autoload.php';
 
-defined('DS') ? : define('DS', DIRECTORY_SEPARATOR);
-defined('ROOT') ? : define('ROOT', dirname(__DIR__) . DS . 'api' . DS);
+// defined('DS') ? : define('DS', DIRECTORY_SEPARATOR);
+// defined('ROOT') ? : define('ROOT', dirname(__DIR__) . DS . 'api' . DS);
 
-if (file_exists(ROOT . '.env')) {
-    try {
-        $dotenv = Dotenv\Dotenv::create(ROOT);
-        $dotenv->load();
-    } catch (Dotenv\Exception\InvalidPathException $e) {
-        //
-    }
-}
+// if (file_exists(ROOT . '.env')) {
+//     try {
+//         $dotenv = Dotenv\Dotenv::create(ROOT);
+//         $dotenv->load();
+//     } catch (Dotenv\Exception\InvalidPathException $e) {
+//         //
+//     }
+// }
 
-$settings = require ROOT . 'app/settings.php';
+$settings = require 'app/settings.php';
+d(getenv('DB_CONNECTION') ?? 'sqlite');
 
 $app = new \Slim\App($settings);
 $container = $app->getContainer();
