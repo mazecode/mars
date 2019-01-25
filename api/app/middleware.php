@@ -1,11 +1,12 @@
 <?php
 
-$app->add(new App\Middlewares\Time);
 $app->add(new App\Middlewares\Locale(
     $container->get('translator'),
     $container->get('settings')['allowed_locales'],
     $container->get('settings')['default_locale']
 ));
+$app->add(new App\Middlewares\URLInter);
+$app->add(new App\Middlewares\Time);
 $app->add(new App\Middlewares\JsonResponse);
 $app->add(new Tuupola\Middleware\CorsMiddleware([
     "origin" => ["*"],

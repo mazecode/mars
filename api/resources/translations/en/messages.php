@@ -1,5 +1,8 @@
 <?php
 
 return [
-    'test' => 'dummy'
+    'test' => 'dummy',
+    'user' => [
+        'created' => 'User created successfuly'
+    ]
 ];

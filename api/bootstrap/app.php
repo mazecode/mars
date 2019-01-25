@@ -23,7 +23,7 @@ try {
 }
 
 // Instantiate the app
-$settings = require __DIR__ . '/../resources/config/app.php';
+$settings = require __DIR__ . '/../app/settings.php';
 $app = new \Slim\App($settings);
 
 // Set up dependencies
@@ -33,5 +33,5 @@ require __DIR__ . '/../app/dependencies.php';
 require __DIR__ . '/../app/middleware.php';
 
 // Register routes
-require __DIR__ . '/../routes/api.php';
-require __DIR__ . '/../routes/web.php';
+require __DIR__ . '/../resources/routes/api.php';
+require __DIR__ . '/../resources/routes/web.php';

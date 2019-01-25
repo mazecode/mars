@@ -15,7 +15,7 @@ class UserController extends BaseController
         try {
             return $response->withJson(User::all());
         } catch (\Exception $e) {
-            return $this->handleError([$this->trans('errors.user.notfound')], 502, $e);
+            return $this->handleError([$this->trans('errors.user.not')], 502, $e);
         }
     }
 
@@ -26,7 +26,9 @@ class UserController extends BaseController
         try {
             return $response->withJson(User::findOrFail((int)$request->getAttribute('id')));
         } catch (\Exception $e) {
-            return $this->handleError(["User {$request->getAttribute('id')} not found"], 502, $e);
+            return $this->handleError([
+                $this->trans('errors.user.notfound', [$request->getAttribute('id')])
+            ], 502, $e);
         }
     }
 
@@ -59,7 +61,7 @@ class UserController extends BaseController
 
             $user->save();
 
-            return $response->addMessage('User created successfuly')->addMessage('Password: ' . $password)->withJson($user, 201);
+            return $response->addMessage($this->trans('messages.user.created'))->addMessage('Password: ' . $password)->withJson($user, 201);
         } catch (\Exception $e) {
             return $this->handleError(['Error creating user'], 502, $e);
         }

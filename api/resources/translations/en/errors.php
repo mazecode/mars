@@ -3,6 +3,6 @@
 return [
     'user' => [
         'not' => 'Users not found',
-        'notfound' => 'User %d not foundc'
+        'notfound' => 'User %d not found'
     ]
 ];

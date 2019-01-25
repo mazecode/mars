@@ -42,9 +42,9 @@ class BaseController
 	public function trans(string $message, array $params = []) : string
 	{
 		$message = $this->container->translator->trans($message);
-
+		
 		if (!empty($params)) {
-			$message = sprintf($message, $params);
+			$message = @vsprintf($message, $params);
 		}
 
 		return $message;

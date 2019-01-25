@@ -8,7 +8,6 @@ use Firebase\JWT\SignatureInvalidException;
 
 class Auth
 {
-
     public function __invoke(Request $request, Response $response, $next)
     {
         $authHeader = $request->getHeader('Authorization');
