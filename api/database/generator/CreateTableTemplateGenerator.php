@@ -11,7 +11,7 @@ class CreateTableTemplateGenerator extends AbstractTemplateGenerator
         $name = str_after($name, 'Create');
         $name = snake_case($name);
         $name = str_replace('_table', '', $name);
-        
+
         return str_replace('$tableName', $name, $template);
     }
     

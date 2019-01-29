@@ -17,6 +17,7 @@ class $className extends BaseMigration
             
             
             $table->timestamps();
+            $table->softDeletes();
         });
     }
     

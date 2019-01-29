@@ -1,8 +1,9 @@
 <?php namespace App\Models;
 
+use App\Models\Base;
 class Rate extends Base
 {
-    protected $table = 'tarifas';
+    protected $table = 'rates';
     protected $hidden = ['id'];
     protected $fillable = [];
 

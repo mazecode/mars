@@ -1,8 +1,9 @@
 <?php namespace App\Models;
 
+use App\Models\Base;
 class Discount extends Base
 {
-    protected $table = 'descuentos';
+    protected $table = 'discounts';
     protected $hidden = ['id'];
     protected $fillable = [];
 

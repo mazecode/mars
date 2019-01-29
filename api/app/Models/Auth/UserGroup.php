@@ -1,8 +1,9 @@
 <?php namespace App\Models\Auth;
 
-class UserGroup extends \App\Models\Base
+use App\Models\Base;
+class UserGroup extends Base
 {
-    protected $table = 'users_groups';
+    protected $table = 'user_groups';
     protected $hidden = ['id'];
     protected $fillable = [];
 }

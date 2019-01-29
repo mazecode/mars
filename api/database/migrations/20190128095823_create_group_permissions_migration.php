@@ -1,25 +1,27 @@
 <?php
 
 use Illuminate\Database\Schema\Blueprint;
+// use Phinx\Migration\AbstractMigration;
 
-class CreateGroupPermissionTable extends BaseMigration
+class CreateGroupPermissionsMigration extends BaseMigration
 {
+
     public function up()
     {
         $this->schema->create('group_permissions', function(Blueprint $table){
-            $table->engine = 'InnoDB';	
-            $table->charset = 'utf8';
-            $table->collation = 'utf8_unicode_ci';	
-
             $table->increments('id');
+            $table->integer('group_id');
+            $table->integer('permission_id');
             $table->foreign('group_id')->references('id')->on('groups');
             $table->foreign('permission_id')->references('id')->on('permissions');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
+    
+    public function down()
+    {
+        $this->schema->dropIfExists('group_permissions');
+    }
 
-    // public function down()
-    // {
-    //     $this->dropTable('group_permissions');
-    // }
 }

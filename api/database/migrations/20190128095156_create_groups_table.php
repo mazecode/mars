@@ -3,23 +3,22 @@
 use Illuminate\Database\Schema\Blueprint;
 // use Phinx\Migration\AbstractMigration;
 
-class Users extends BaseMigration
+class CreateGroupsTable extends BaseMigration
 {
 
     public function up()
     {
-        $this->schema->create('users', function (Blueprint $table) {
-            // Auto-increment id 
+        $this->schema->create('groups', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
-            // Required for Eloquent's created_at and updated_at columns 
             $table->timestamps();
+            $table->softDeletes();
         });
     }
     
     public function down()
     {
-        //
+        $this->schema->dropIfExists('groups');
     }
 
 }

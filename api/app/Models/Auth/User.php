@@ -1,10 +1,12 @@
 <?php namespace App\Models\Auth;
 
-class User extends \App\Models\Base
+use App\Models\Base;
+
+class User extends Base
 {
     protected $table = 'users';
     protected $hidden = [
-        // 'id',
+        'id',
         'created_at',
         'updated_at',
         'deleted_at'
@@ -25,6 +27,9 @@ class User extends \App\Models\Base
         'location',
         'is_fijo',
         'team_admin',
+        'access_token',
+        'pwd_update',
+        'pwd_history',
         'created_at',
         'updated_at'
     ];
@@ -58,8 +63,8 @@ class User extends \App\Models\Base
             "TEAM_ADMIN" : "28296:28296:23595:1172:28296:28296:28296:28296:28296",
             "WITH_API" : null,
             "ACCESS_TOKEN" : null,
-            "PW_UPDATE" : "2018-12-27T16:06:56Z",
-            "PW_HISTORY" : "0a382378090a5d03bc6411552a75f1c0;"
+            "PWD_UPDATE" : "2018-12-27T16:06:56Z",
+            "PWD_HISTORY" : "0a382378090a5d03bc6411552a75f1c0;"
         }]');
     }
 }

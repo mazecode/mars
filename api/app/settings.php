@@ -7,11 +7,11 @@ return [
         'masterPassword' => 'm4r5p4r4t0d0s_2oi7',
     ],
     'settings' => [
-    'displayErrorDetails' => getenv('APP_DEBUG') === 'true', // set to false in production
-    'determineRouteBeforeAppMiddleware' => true,
-    'addContentLengthHeader' => false, // Allow the web server to send the content-length header
+        'displayErrorDetails' => getenv('APP_DEBUG') === 'true', // set to false in production
+        'determineRouteBeforeAppMiddleware' => true,
+        'addContentLengthHeader' => false, // Allow the web server to send the content-length header
 
-    "app" => [
+        "app" => [
             'name' => getenv('APP_NAME'),
             'url' => getenv('APP_URL'),
             'env' => getenv('APP_ENV'),
@@ -24,7 +24,7 @@ return [
         'database' => [
             'driver' => getenv('DB_CONNECTION', true) ? getenv('DB_CONNECTION') : 'mysql',
             'host' => getenv('DB_HOST', true) ? getenv('DB_HOST') : 'localhost',
-            'database' => getenv('DB_DATABASE', true) ? getenv('DB_DATABASE') : ROOT . 'database/dummy.db',
+            'database' => getenv('DB_DATABASE', true) ? getenv('DB_DATABASE') : __DIR__ . '/../database/dummy.db',
             'username' => getenv('DB_USERNAME', true) ? getenv('DB_USERNAME') : '',
             'password' => getenv('DB_PASSWORD', true) ? getenv('DB_PASSWORD') : '',
             'charset' => getenv('DB_CHARSET', true) ? getenv('DB_CHARSET') : 'utf8',

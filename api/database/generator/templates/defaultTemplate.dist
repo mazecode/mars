@@ -8,7 +8,7 @@ class $className extends $baseClassName
 
     public function up()
     {
-        $this->schema->create('$tableName', function (Blueprint $table) {
+        $this->schema->create($friendlyName, function (Blueprint $table) {
             $table->increments('id');
             
             
@@ -18,7 +18,7 @@ class $className extends $baseClassName
     
     public function down()
     {
-        $this->schema->dropIfExists('$tableName');
+        $this->schema->dropIfExists("$tableName");
     }
 
 }

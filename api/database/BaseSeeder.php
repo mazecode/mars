@@ -17,6 +17,7 @@ class BaseSeeder extends \Phinx\Seed\AbstractSeed
         $this->faker = Faker\Factory::create();
         $this->factory = new \Illuminate\Database\Eloquent\Factory($this->faker);
         $factories = glob(static::FACTORIES__PATH . '*.php');
+
         foreach ($factories as $factory) {
             /** @noinspection PhpIncludeInspection */
             require $factory;
