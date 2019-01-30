@@ -13,7 +13,7 @@ return [
 
         "app" => [
             'name' => getenv('APP_NAME'),
-            'url' => getenv('APP_URL'),
+            'url' => getenv('APP_URL', true) ? getenv('APP_URL', true) : 'http://localhost',
             'env' => getenv('APP_ENV'),
         ],
 

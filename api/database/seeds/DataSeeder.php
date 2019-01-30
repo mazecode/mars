@@ -4,7 +4,7 @@ use App\Models\Auth\User;
 
 class DataSeeder extends BaseSeeder
 {
-    protected $usersCount = 100;
+    protected $usersCount = 10;
 
     public function run()
     {

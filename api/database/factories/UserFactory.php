@@ -3,12 +3,13 @@
 use App\Models\Auth\User;
 
 $this->factory->define(User::class, function () {
+    $username = $this->faker->userName;
     return  [
         'name' => $this->faker->name,
         'surnames' => $this->faker->lastName,
         'email' => $this->faker->email,
-        'username' => $this->faker->userName,
-        'password' => password_hash($this->faker->password, PASSWORD_DEFAULT),
+        'username' => $username,
+        'password' => md5($username),
         'agency' => $this->faker->company,
         'acd' => $this->faker->numberBetween($min = 1, $max = 9999),
         'access_token' => $this->faker->sha256,

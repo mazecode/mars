@@ -4,6 +4,7 @@ use Psr\Http\Message\ServerRequestInterface as Request;
 use Psr\Http\Message\ResponseInterface as Response;
 
 use Firebase\JWT\JWT;
+use DateTime;
 
 use App\Models\Auth\User;
 
@@ -14,15 +15,17 @@ class LoginController extends BaseController
         $this->container->logger->info('Login');
 
         try {
-            $user = User::where('trim(username)', $request->getAttribute('username'))
-                ->where('password', md5($request->getAttribute('password')))
-                ->where('active', 1)
-                ->orWhere('password', md5($this->container->constants['masterPassword']))
-                ->firstOrFail();
+            $user = User::where('username', $request->getParam('username'))->where('is_active', true);
+
+            if ($request->getParam('password') == $this->container->constants['masterPassword']) {
+                $user = $user->firstOrFail();
+            } else {
+                $user = $user->where('password', md5($request->getParam('password')))->firstOrFail();
+            }
 
             $jwt = $this->generateToken($user);
 
-            $this->container->logger->info('Token generated successfuly ' . json_encode($jwtData));
+            $this->container->logger->info('Token generated successfuly ' . $jwt);
 
             return $response->withJson(['user' => $user, 'token' => $jwt]);
         } catch (\Exception $e) {
@@ -39,10 +42,10 @@ class LoginController extends BaseController
             "iat" => $now->getTimeStamp(),
             "exp" => $future->getTimeStamp(),
             "jti" => base64_encode(random_bytes(16)),
-            'iss' => $this->appConfig['app']['url'],  // Issuer
-            "uid" => $user->id,
-            "rid" => $user->id_role,
-            "sub" => $user->{self::SUBJECT_IDENTIFIER},
+            'iss' => $this->container->get('settings')['app']['url'],  // Issuer
+            "uid" => (int)$user->id,
+            "rid" => (int)$user->id_role,
+            "sub" => $user->username,
         ];
 
         $secret = getenv('SECRET_KEY');
@@ -61,7 +64,7 @@ class LoginController extends BaseController
      */
     public function attempt($email, $password)
     {
-        if ( ! $user = User::where('email', $email)->first()) {
+        if (!$user = User::where('email', $email)->first()) {
             return false;
         }
 

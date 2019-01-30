@@ -48,7 +48,6 @@ class BaseController
 			->addMessage($messages)
 			->addMessage(getenv('APP_DEBUG') ? $exception->getMessage() : '')
 			->withJson([], $code);
-
 	}
 
 	public function trans(string $message, array $params = []) : string
