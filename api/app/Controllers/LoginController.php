@@ -10,6 +10,8 @@ use App\Models\Auth\User;
 
 class LoginController extends BaseController
 {
+    public static $SUBJECT_IDENTIFIER = 'username';
+    
     public function login(Request $request, Response $response, array $args)
     {
         $this->container->logger->info('Login');
@@ -33,6 +35,13 @@ class LoginController extends BaseController
         }
     }
 
+    /**
+     * Generate authentication token
+     * 
+     * @param $user \App\Models\Auth\User
+     * 
+     * @return string|null
+     */
     public function generateToken(User $user)
     {
         $now = new DateTime();
@@ -60,7 +69,7 @@ class LoginController extends BaseController
      * @param $email
      * @param $password
      *
-     * @return bool|\Conduit\Models\User
+     * @return bool|\App\Models\Auth\User
      */
     public function attempt($email, $password)
     {
@@ -86,8 +95,8 @@ class LoginController extends BaseController
     {
         // Should add more validation to the present and validity of the token?
         if ($token = $request->getAttribute('token')) {
-            return User::where(static::SUBJECT_IDENTIFIER, '=', $token->sub)->first();
-        };
+            return User::where(self::$SUBJECT_IDENTIFIER, '=', $token->sub)->first();
+        };s
     }
 
 }
