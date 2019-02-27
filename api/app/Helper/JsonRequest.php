@@ -3,7 +3,8 @@ namespace App\Helper;
 
 use \Psr\Http\Message\ServerRequestInterface as HTTPRequest;
 
-class JsonRequest {
+class JsonRequest
+{
 
   private $requestParams = [];
 
@@ -51,7 +52,8 @@ class JsonRequest {
    *
    * @return array
    */
-  public function getRequestParams() {
+  public function getRequestParams()
+  {
     return $this->requestParams;
   }
 }

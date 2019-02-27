@@ -8,15 +8,35 @@ use DateTime;
 
 use App\Models\Auth\User;
 
+use Respect\Validation\Validator as V;
+
+
+
 class LoginController extends BaseController
 {
     public static $SUBJECT_IDENTIFIER = 'username';
-    
+
+    /**
+     * Login main POST function
+     * 
+     * @param $request \Request
+     * @param $response \Response
+     * @param $args array
+     * 
+     * @return json|Response
+     */
     public function login(Request $request, Response $response, array $args)
     {
         $this->container->logger->info('Login');
 
         try {
+            $validator = $this->validator->validate($request, [
+                'username' => V::notEmpty()->length(3, 50),
+                'password' => V::notEmpty()->length(5, 20)
+            ]);
+
+            if (!$validator->isValid()) return $response->addMessage('Validation error')->withError($validator->getErrors(), 422);
+
             $user = User::where('username', $request->getParam('username'))->where('is_active', true);
 
             if ($request->getParam('password') == $this->container->constants['masterPassword']) {
@@ -30,8 +50,9 @@ class LoginController extends BaseController
             $this->container->logger->info('Token generated successfuly ' . $jwt);
 
             return $response->withJson(['user' => $user, 'token' => $jwt]);
+
         } catch (\Exception $e) {
-            return $this->handleError(['Login failed'], 401, $e);
+            return $this->handleError($this->trans('errors.login.failed'), 401, $e);
         }
     }
 
@@ -96,7 +117,6 @@ class LoginController extends BaseController
         // Should add more validation to the present and validity of the token?
         if ($token = $request->getAttribute('token')) {
             return User::where(self::$SUBJECT_IDENTIFIER, '=', $token->sub)->first();
-        };s
+        };
     }
-
 }

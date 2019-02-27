@@ -1,7 +1,7 @@
 <?php namespace App\Models;
 
 use App\Models\Base;
-class Discount extends Base
+class Discount extends Base implements \DiscountInterface
 {
     protected $table = 'discounts';
     protected $hidden = ['id'];

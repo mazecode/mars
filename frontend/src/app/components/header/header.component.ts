@@ -12,13 +12,24 @@ import { IUser } from '../../interfaces/IUser';
 })
 export class HeaderComponent implements OnInit {
   currentUser: IUser = null;
+  isLogged = false;
 
   constructor(
     private auth: AuthService,
     private alertService: NotificationService
-  ) {}
+  ) {
+    console.log('Header init...');
+  }
 
   ngOnInit() {
+    console.log('Header init... again');
+    this.isLogged = this.auth.isLogged();
+
+    console.log(this);
+
+    if (this.isLogged) {
+      this.logout();
+    }
     this.currentUser = this.auth.getCurrentUser();
   }
 

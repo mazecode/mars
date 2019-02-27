@@ -2,12 +2,11 @@
 namespace App\Helper;
 
 /**
-* 
-*/
-class Hash 
+ * 
+ */
+class Hash
 {
-	
-	protected $config;
+    protected $config;
 
     public function __construct($config)
     {

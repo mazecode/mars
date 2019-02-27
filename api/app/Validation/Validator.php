@@ -2,34 +2,92 @@
 
 namespace App\Validation;
 
-use Violin\Violin;
+use Psr\Http\Message\ServerRequestInterface;
+use Respect\Validation\Exceptions\NestedValidationException;
 
-use App\Model\User;
-
-class Validator extends Violin
+class Validator
 {
-    function __construct(User $user) {
-        $this->user = $user;
 
-        $this->addFieldMessages([
-            'email' => [
-                'uniqueEmail' => 'email already in use'
-            ],
-            'username' => [
-                'uniqueUsername' => 'username already in use'
-            ]
-        ]);
+    /** @var array Validations errors */
+    protected $errors = [];
+
+    /**
+     * Validate request params based on provided rules and fields
+     *
+     * @param \Psr\Http\Message\ServerRequestInterface $request
+     * @param array                                    $rules
+     *
+     * @return static
+     */
+    public function validate(ServerRequestInterface $request, array $rules)
+    {
+        /** @var \Respect\Validation\Validator $rule */
+        foreach ($rules as $field => $rule) {
+            try {
+                $rule->setName($field)->assert($request->getParam($field));
+            } catch (NestedValidationException $e) {
+                $this->errors[$field] = $e->getMessages();
+            }
+        }
+        $_SESSION['errors'] = $this->errors;
+
+        return $this;
     }
 
-    public function validate_uniqueEmail($value, $input, $args)
+    /**
+     * Validate an array of values and fields
+     *
+     * @param array $values
+     * @param array $rules
+     *
+     * @return static
+     */
+    public function validateArray(array $values, array $rules)
     {
-        $user = $this->user->where('email', $value);
+        /** @var \Respect\Validation\Validator $rule */
+        foreach ($rules as $field => $rule) {
+            try {
+                $rule->setName($field)->assert($this->getValue($values, $field));
+            } catch (NestedValidationException $e) {
+                $this->errors[$field] = $e->getMessages();
+            }
+        }
 
-        return ! (bool) $user->count();
+        $_SESSION['errors'] = $this->errors;
+
+        return $this;
     }
 
-    public function validate_uniqueUsername($value, $input, $args)
+    /**
+     * Check if there is any validation error
+     *
+     * @return bool
+     */
+    public function failed()
     {
-        return ! (bool) $this->user->where('username', $value)->count();
+        return !empty($this->errors);
+    }
+
+    /**
+     * Return all validations errors if any
+     *
+     * @return array
+     */
+    public function getErrors()
+    {
+        return $this->errors;
+    }
+
+    /**
+     * get the value of the array
+     *
+     * @param $values
+     * @param $field
+     *
+     * @return string|null
+     */
+    private function getValue($values, $field)
+    {
+        return isset($values[$field]) ? $values[$field] : null;
     }
 }

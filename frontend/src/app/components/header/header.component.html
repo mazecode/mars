@@ -1,14 +1,49 @@
 <app-notification></app-notification>
 <!-- <button class="btn btn-success" (click)="success('Success!!')">Success</button> -->
 
-<!--The content below is only a placeholder and can be replaced.-->
-<mat-toolbar color="primary" *ngIf="currentUser">
+<!-- <div [hidden]="isLogged"> -->
+<mat-toolbar color="warn">
     <mat-toolbar-row>
-        <!--  <span>HOME</span> -->
-        <span><a routerLink="/">HOME</a></span>
+        <button type="button" aria-label="Toggle sidenav" mat-icon-button (click)="drawer.toggle()" color="clear">
+                <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+            </button>
+
+        <span class="logotype"><img src="https://ya-webdesign.com/images/planet-ring-png-8.png"></span>
+
         <span class="spacer"></span>
         <a mat-button routerLink="/register">Register</a>
-        <a mat-button routerLink="/login">Login</a>
         <a mat-button (click)="logout()">Logout</a>
     </mat-toolbar-row>
 </mat-toolbar>
+
+<mat-sidenav-container class="example-container" [hasBackdrop]="true">
+    <mat-sidenav #drawer mode="over" role="navigation" position="start">
+        <mat-nav-list>
+            <h2 matSubheader>MENU</h2>
+            <a mat-list-item routerLink="/">
+                <mat-icon matListIcon>home</mat-icon>
+                Home
+            </a>
+            <a mat-list-item routerLink="/rate">
+                <mat-icon matListIcon>work</mat-icon>
+                Tarifas
+            </a>
+            <a mat-list-item routerLink="/discount">
+                <mat-icon matListIcon>redeem</mat-icon>
+                Discount
+            </a>
+        </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav position="end">End</mat-sidenav>
+
+    <main class="">
+        <mat-sidenav-content>
+            <router-outlet></router-outlet>
+        </mat-sidenav-content>
+    </main>
+</mat-sidenav-container>
+<!-- </div> -->
+<!-- 
+<div [hidden]="!isLogged">
+    <router-outlet></router-outlet>
+</div> -->

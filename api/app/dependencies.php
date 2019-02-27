@@ -36,9 +36,7 @@ $container['response'] = function ($c) {
 
 // Request Validator
 $container['validator'] = function ($c) {
-    \Respect\Validation\Validator::with('\\Conduit\\Validation\\Rules');
-
-    // return new Conduit\Validation\Validator();
+    return new Awurth\SlimValidation\Validator();
 };
 
 // Jwt Middleware
@@ -66,4 +64,11 @@ $container['translator'] = function ($c) {
     $loader = new \Illuminate\Translation\FileLoader(new \Illuminate\Filesystem\Filesystem(), $c->get('settings')['translations_path']);
 
     return (new \Illuminate\Translation\Translator($loader, $c->get('settings')['default_locale']));
+};
+
+//Override the default Not Found Handler
+$container['notFoundHandler'] = function ($c) {
+    return function ($request, $response) use ($c) {
+        return $response->withError('Where did you go butter hooker? Hahahaha', 404);
+    };
 };

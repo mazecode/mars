@@ -29,7 +29,11 @@ class Locale
         if ($locale === null) {
             $locale = array_key_exists('locale', $_SESSION) ? $_SESSION['locale'] : $this->defaultLocale;
         }
+        
+        // Set response
+        $response = $response->setLocation($locale);
 
+        // Set translator object
         $this->translator->setLocale($locale);
         $this->translator->setFallback($locale);
 
@@ -47,6 +51,7 @@ class Locale
         if (preg_match($pattern, $uri->getPath(), $matches)) {
             return $matches[1];
         }
+
         return null;
     }
 }

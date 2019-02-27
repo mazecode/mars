@@ -4,6 +4,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { JwtService } from '../../services/jwt/jwt.service';
 import { AuthService } from '../../services/auth/auth.service';
+import { IUser } from '../../interfaces/IUser';
 
 export interface Tile {
   color: string;
@@ -21,12 +22,13 @@ export class LoginComponent implements OnInit {
   username: string;
   password: string;
   showSpinner = false;
+  user = {} as IUser;
 
   tiles: Tile[] = [
-    {text: 'One', cols: 3, rows: 1, color: 'lightblue'},
-    {text: 'Two', cols: 1, rows: 2, color: 'lightgreen'},
-    {text: 'Three', cols: 1, rows: 1, color: 'lightpink'},
-    {text: 'Four', cols: 2, rows: 1, color: '#DDBDF1'},
+    { text: 'One', cols: 3, rows: 1, color: 'lightblue' },
+    { text: 'Two', cols: 1, rows: 2, color: 'lightgreen' },
+    { text: 'Three', cols: 1, rows: 1, color: 'lightpink' },
+    { text: 'Four', cols: 2, rows: 1, color: '#DDBDF1' }
   ];
 
   constructor(
@@ -34,7 +36,9 @@ export class LoginComponent implements OnInit {
     private jwt: JwtService,
     private router: Router,
     private route: ActivatedRoute
-  ) {}
+  ) {
+    console.log('Login init ...');
+  }
 
   ngOnInit() {
     const token = this.jwt.getToken();
@@ -44,10 +48,13 @@ export class LoginComponent implements OnInit {
     }
   }
 
-  public async login(username: string, password: string) {
+  public async login() {
     this.showSpinner = true;
 
-    const pass = await this.service.login(username, password);
+    const pass = await this.service.login(
+      this.user.username,
+      this.user.password
+    );
 
     setTimeout(() => {
       this.showSpinner = false;

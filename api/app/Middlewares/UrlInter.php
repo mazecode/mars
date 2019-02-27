@@ -7,6 +7,7 @@ class URLInter
     public function __invoke($request, $response, $next)
     {
         $uri = $request->getUri();
+
         $path = $uri->getPath();
         if ($path != '/' && substr($path, -1) == '/') {
             // permanently redirect paths with a trailing slash

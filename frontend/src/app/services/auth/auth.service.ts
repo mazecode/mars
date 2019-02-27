@@ -39,9 +39,9 @@ export class AuthService {
   }
 
   public logout(): void {
-    window.location.reload();
     this.session.destroyCurrentUser();
     this.jwt.destroyToken();
+    window.location.reload();
   }
 
   public isLogged() {

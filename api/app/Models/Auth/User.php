@@ -7,6 +7,12 @@ class User extends Base
     protected $table = 'users';
     protected $hidden = [
         'id',
+        'password',
+        'remember_token',
+        'pwd_update',
+        'pwd_history',
+        'access_token',
+        'team_admin',
         'created_at',
         'updated_at',
         'deleted_at'
@@ -32,6 +38,12 @@ class User extends Base
         'pwd_history',
         'created_at',
         'updated_at'
+    ];
+
+    protected $casts = [
+        'active' => 'boolean',
+        'id_role' => 'integer',
+        'is_fijo' => 'boolean',
     ];
 
     public function setUsernameAttribute($value)
@@ -66,5 +78,11 @@ class User extends Base
             "PWD_UPDATE" : "2018-12-27T16:06:56Z",
             "PWD_HISTORY" : "0a382378090a5d03bc6411552a75f1c0;"
         }]');
+    }
+
+    public function teamAdmins() {
+        $team_admin = array_unique(explode(':', $this->team_admin));
+        
+        return self::whereIn('id', $team_admin)->get();
     }
 }

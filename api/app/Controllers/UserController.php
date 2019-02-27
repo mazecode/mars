@@ -37,16 +37,26 @@ class UserController extends BaseController
         $this->container->logger->info('User create');
 
         try {
-            $this->validator->validateArray(
-                $data = $request->getParam('username'),
-                [
-                    'username' => v::notEmpty()
-                ]
-            );
+            $validator = $this->validator->validate($request, [
+                'username' => V::notEmpty()->length(3, 50),
+                'password' => V::notEmpty()->length(5, 20),
+                'name' => v::noEmpty(),
+                'surnames' => v::noEmpty(),
+                'email' => v::noEmpty(),
+                'password' => v::noEmpty(),
+                'acd' => v::noEmpty(),
+                'team_leader' => v::noEmpty(),
+                'agency' => v::noEmpty(),
+                'service' => v::noEmpty(),
+                'segment' => v::noEmpty(),
+                'active' => v::noEmpty(),
+                'id_role' => v::noEmpty(),
+                'location' => v::noEmpty(),
+                'is_fijo' => v::noEmpty(),
+                'team_admin' => v::noEmpty()
+            ]);
 
-            if ($this->validator->failed()) {
-                return $response->setError(true)->addMessage($this->validator->getErrors())->withJson([], 422);
-            }
+            if (!$validator->isValid()) return $response->addMessage('Validation error')->withError($validator->getErrors(), 422);
 
             $user = new User();
 

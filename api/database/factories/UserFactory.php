@@ -3,8 +3,10 @@
 use App\Models\Auth\User;
 
 $this->factory->define(User::class, function () {
+
     $username = $this->faker->userName;
-    return  [
+
+    return [
         'name' => $this->faker->name,
         'surnames' => $this->faker->lastName,
         'email' => $this->faker->email,
@@ -29,5 +31,3 @@ $this->factory->define(User::class, function () {
 //         },
 //     ];
 // });
-
-

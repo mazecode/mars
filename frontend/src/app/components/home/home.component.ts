@@ -9,7 +9,7 @@ import { IUser } from '../../interfaces/IUser';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
-  styleUrls: ['./home.component.scss'],
+  styleUrls: ['./home.component.scss']
   // providers: [SessionService]
 })
 export class HomeComponent implements OnInit {
@@ -19,16 +19,19 @@ export class HomeComponent implements OnInit {
     private service: UserService,
     private jwt: JwtService,
     private router: Router
-  ) {}
+  ) {
+    console.log('Home init...');
+  }
 
-  async ngOnInit() {
+  ngOnInit() {
     const token = this.jwt.getToken();
+
     if (!token) {
       this.router.navigate(['/']);
       return true;
     }
 
-    await this.getAllUsers();
+    this.getAllUsers();
   }
 
   public async getAllUsers() {

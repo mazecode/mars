@@ -28,17 +28,17 @@ class Response extends \Slim\Http\Response
 		$this->error = false;
 		$this->binary = false;
 		$this->messagesResponse = [];
-		$this->location = "";
+		$this->location = "en";
 		$this->jsonCallBack = "";
 		$this->jsonQueryFormat = "query";
-		$this->contentType = "";
+		$this->contentType = "application/json; charset=utf-8";
 		$this->statusCode = 200;
 		$this->statusText = "OK";
 		$this->responsetime = 0;
 		$this->cachedResponse = false;
 	}
 
-	public function getData()
+	public function getData() : array
 	{
 		return $this->data;
 	}
@@ -50,7 +50,7 @@ class Response extends \Slim\Http\Response
 		return $this;
 	}
 
-	public function getStatusText()
+	public function getStatusText() : string
 	{
 		return $this->statusText;
 	}
@@ -62,64 +62,73 @@ class Response extends \Slim\Http\Response
 		return $this;
 	}
 
-	public function getStatusCode()
+	public function getStatusCode() : int
 	{
 		return $this->statusCode;
 	}
 
-	public function setStatusCode($statusCode)
+	public function setStatusCode(int $statusCode)
 	{
 		$this->statusCode = $statusCode;
 
 		return $this;
 	}
 
-	public function getError()
+	public function getError() : bool
 	{
 		return $this->error;
 	}
 
-	public function setError($error)
+	public function setError(bool $error)
 	{
 		$this->error = $error;
 
 		return $this;
 	}
 
-	public function getFormat()
+	public function getFormat() : string
 	{
 		return $this->format;
 	}
 
-	public function setFormat($format)
+	public function setFormat(string $format)
 	{
 		$this->format = $format;
 
 		return $this;
 	}
 
-	function addMessage($message)
+	public function setLocation(string $location)
+	{
+		$this->location = $location;
+
+		return $this;
+	}
+
+	public function addMessage($message)
 	{
 		if (!is_array($message) && !is_string($message)) {
-			return $this->setError(true)->addMessage('Message must be an array or string')->withJson([], 500);
+			return $this->setError(true)->addMessage('Message must be an array or string')->withJson(null, 500);
 		}
 
 		if (is_string($message)) {
 			$message = [$message];
 		}
-		$this->messagesResponse = array_merge($this->messagesResponse, $message);
+
+		$this->messagesResponse = @array_merge($this->messagesResponse, $message);
 
 		return $this;
 	}
 
-	function getDataPacket(bool $reset = false)
+	public function getDataPacket(bool $reset = false)
 	{
 		$packet = [
 			"data" => $this->data,
 			"messages" => $this->messagesResponse,
 			"error" => $this->error ? true : false,
 			"code" => $this->statusCode,
-			"status" => $this->statusText
+			"status" => $this->statusText,
+			"location" => $this->location
 		];
 
 		if ($reset) {
@@ -134,11 +143,16 @@ class Response extends \Slim\Http\Response
 		if (!isset($status)) {
 			$status = 200;
 		}
-		$response = $this->withBody(new \Slim\Http\Body(fopen('php://temp', 'r+')))->withStatus($status);
-		$response = $response->setData($data)->setStatusCode($status)->setStatusText($response->getReasonPhrase());
+
+		$response = $this->withBody(new \Slim\Http\Body(fopen('php://temp', 'r+')))
+			->withStatus($status)
+			->setStatusCode($status)
+			->setData($data);
+
+		$response = $response->setStatusText($response->getReasonPhrase());
 
 		if ($response->getFormat() === 'json') {
-			$response->body->write($json = json_encode($response->getDataPacket(), $encodingOptions | JSON_PRETTY_PRINT));
+			$response->body->write($json = json_encode($response->getDataPacket(), $encodingOptions ?? JSON_PRETTY_PRINT));
 
 			if ($json === false) {
 				throw new \RuntimeException(json_last_error_msg(), json_last_error());
@@ -148,5 +162,10 @@ class Response extends \Slim\Http\Response
 		}
 
 		return $response;
+	}
+
+	public function withError($message, $status = null, $encodingOptions = 0)
+	{
+		return $this->addMessage($message)->setError(true)->withJson(null, $status, $encodingOptions);
 	}
 }

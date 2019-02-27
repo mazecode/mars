@@ -1,7 +1,7 @@
 <?php namespace App\Models;
 
 use App\Models\Base;
-class Rate extends Base
+class Rate extends Base implements \RateInterface
 {
     protected $table = 'rates';
     protected $hidden = ['id'];
