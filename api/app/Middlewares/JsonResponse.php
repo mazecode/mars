@@ -9,7 +9,7 @@ class JsonResponse
     private $remaining;
     private $reste;
 
-    public function __construct(int $limit = 30, int $remaining = 11, int $reset = 44)
+    public function __construct($limit = 30, $remaining = 11, $reset = 44)
     {
         $this->limit = $limit;
         $this->remaining = $remaining;

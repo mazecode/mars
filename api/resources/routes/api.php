@@ -10,7 +10,9 @@ $app->group('/api', function () use ($app) {
     });
 
     $app->group('/v1/{locale}', function () use ($app) {
-        $app->get('', function() { return 'Welcome to API version 1.0'; });
+        $app->get('', function () {
+            return 'Welcome to API version 1.0';
+        });
 
         $app->post('/login', App\Controllers\LoginController::class . ':login');
 

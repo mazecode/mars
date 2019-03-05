@@ -7,7 +7,9 @@ import { NGXLogger } from 'ngx-logger';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
+
   constructor(private logger: NGXLogger) {
     this.logger.debug('APP init...');
+    console.log('APP init...');
   }
 }

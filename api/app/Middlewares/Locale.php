@@ -15,7 +15,7 @@ class Locale
     private $allowedLocales;
     private $defaultLocale;
 
-    public function __construct(Translator $translator, array $allowedLocales, string $defaultLocale)
+    public function __construct(Translator $translator, $allowedLocales, $defaultLocale)
     {
         $this->translator = $translator;
         $this->allowedLocales = $allowedLocales;

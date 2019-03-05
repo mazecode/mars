@@ -38,7 +38,7 @@ class Response extends \Slim\Http\Response
 		$this->cachedResponse = false;
 	}
 
-	public function getData() : array
+	public function getData()
 	{
 		return $this->data;
 	}
@@ -50,7 +50,7 @@ class Response extends \Slim\Http\Response
 		return $this;
 	}
 
-	public function getStatusText() : string
+	public function getStatusText()
 	{
 		return $this->statusText;
 	}
@@ -62,43 +62,43 @@ class Response extends \Slim\Http\Response
 		return $this;
 	}
 
-	public function getStatusCode() : int
+	public function getStatusCode()
 	{
 		return $this->statusCode;
 	}
 
-	public function setStatusCode(int $statusCode)
+	public function setStatusCode($statusCode)
 	{
 		$this->statusCode = $statusCode;
 
 		return $this;
 	}
 
-	public function getError() : bool
+	public function getError()
 	{
 		return $this->error;
 	}
 
-	public function setError(bool $error)
+	public function setError($error)
 	{
 		$this->error = $error;
 
 		return $this;
 	}
 
-	public function getFormat() : string
+	public function getFormat()
 	{
 		return $this->format;
 	}
 
-	public function setFormat(string $format)
+	public function setFormat($format)
 	{
 		$this->format = $format;
 
 		return $this;
 	}
 
-	public function setLocation(string $location)
+	public function setLocation($location)
 	{
 		$this->location = $location;
 
@@ -120,7 +120,7 @@ class Response extends \Slim\Http\Response
 		return $this;
 	}
 
-	public function getDataPacket(bool $reset = false)
+	public function getDataPacket($reset = false)
 	{
 		$packet = [
 			"data" => $this->data,
@@ -152,7 +152,7 @@ class Response extends \Slim\Http\Response
 		$response = $response->setStatusText($response->getReasonPhrase());
 
 		if ($response->getFormat() === 'json') {
-			$response->body->write($json = json_encode($response->getDataPacket(), $encodingOptions ?? JSON_PRETTY_PRINT));
+			$response->body->write($json = json_encode($response->getDataPacket(), $encodingOptions ? $encodingOptions : JSON_PRETTY_PRINT));
 
 			if ($json === false) {
 				throw new \RuntimeException(json_last_error_msg(), json_last_error());

@@ -35,3 +35,4 @@ require __DIR__ . '/../app/middleware.php';
 // Register routes
 require __DIR__ . '/../resources/routes/api.php';
 require __DIR__ . '/../resources/routes/web.php';
+require __DIR__ . '/../resources/routes/wsdl.php';

@@ -1,6 +1,6 @@
 {
-    "name": "vodafone/conf_saturn",
-    "description": "Configurador de Ofertas/Descuentos",
+    "name": "vodafone/saturn_api",
+    "description": "API Saturn",
     "type": "project",
     "keywords": ["vodafone", "mars", "api", "microframework", "rest", "router", "psr7"],
     "license": "MIT",
@@ -9,27 +9,30 @@
         "email": "diego.feliud@gmail.com"
     }],
     "require": {
-        "php": ">=7.0",
-        "awurth/slim-validation": "^3.1",
+        "php": ">=5.6",
+        "davidepastore/slim-validation": "^0.5.1",
+        "eloquent/enumeration": "5.1.1",
         "firebase/php-jwt": "^5.0",
-        "illuminate/console": "^5.7",
-        "illuminate/database": "^5.5",
-        "illuminate/filesystem": "^5.7",
-        "illuminate/translation": "^5.3",
+        "greenter/xmldsig": "^5.0",
+        "illuminate/console": "5.2.45",
+        "illuminate/database": "5.2.45",
+        "illuminate/filesystem": "5.2.45",
+        "illuminate/translation": "5.2.x-dev",
         "monolog/monolog": "^1.17",
+        "respect/validation": "^1.1",
         "robmorgan/phinx": "dev-master#4c26aeb",
-        "slim/http": "^0.5",
         "slim/php-view": "^2.0",
         "slim/slim": "^3.9",
-        "tuupola/cors-middleware": "^0.9.1",
+        "tuupola/cors-middleware": "0.5.2",
         "tuupola/slim-jwt-auth": "^2.3",
-        "vlucas/phpdotenv": "^3.0"
+        "vlucas/phpdotenv": "^3.0",
+        "zendframework/zend-soap": "^2.7",
+        "yajra/laravel-oci8": "^2.4"
     },
     "require-dev": {
-        "phpunit/phpunit": "^6.4",
+        "phpunit/phpunit": "5.7.27",
         "seld/jsonlint": "^1.7",
-        "fzaninotto/faker": "^1.7",
-        "mazecode/dumpper": "^1.0"
+        "fzaninotto/faker": "^1.7"
     },
     "autoload": {
         "psr-4": {

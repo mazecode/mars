@@ -1,14 +1,14 @@
 <?php
-
+ // dd( $container->get('settings')['translations']['default_locale']);
 $app->add(new App\Middlewares\Locale(
     $container->get('translator'),
-    $container->get('settings')['allowed_locales'],
-    $container->get('settings')['default_locale']
+    $container->get('settings')['translations']['allowed_locales'],
+    $container->get('settings')['translations']['default_locale']
 ));
 $app->add(new App\Middlewares\URLInter);
 $app->add(new App\Middlewares\Time);
 $app->add(new App\Middlewares\JsonResponse);
-$app->add(new Tuupola\Middleware\CorsMiddleware([
+$app->add(new Tuupola\Middleware\Cors([
     "origin" => ["*"],
     "methods" => ["GET", "POST", "PUT", "PATCH", "DELETE"],
     "headers.allow" => ["Authorization", "Content-Type", "Accept", "X-Auth-Token", "Origin", "X-Requested-With", ],
@@ -23,6 +23,7 @@ $app->add(new Tuupola\Middleware\CorsMiddleware([
             ->withJson([], 505);
     }
 ]));
-    
-// https://github.com/oscarotero/psr7-middlewares
-// $app->add(new \Slim\Csrf\Guard);
+
+$app->add(new App\Middlewares\WebService);
+
+

@@ -30,12 +30,15 @@ class LoginController extends BaseController
         $this->container->logger->info('Login');
 
         try {
-            $validator = $this->validator->validate($request, [
-                'username' => V::notEmpty()->length(3, 50),
-                'password' => V::notEmpty()->length(5, 20)
-            ]);
+            // dd($this->validator);
 
-            if (!$validator->isValid()) return $response->addMessage('Validation error')->withError($validator->getErrors(), 422);
+            // $validator = $this->validator->validate($request, [
+            //     'username' => V::notEmpty()->length(3, 50),
+            //     'password' => V::notEmpty()->length(5, 20)
+            // ]);
+
+            // if ($validator) return $response->addMessage('Validation error')->withError($validator->getErrors(), 422);
+            // // if (!$validator->isValid()) return $response->addMessage('Validation error')->withError($validator->getErrors(), 422);
 
             $user = User::where('username', $request->getParam('username'))->where('is_active', true);
 
